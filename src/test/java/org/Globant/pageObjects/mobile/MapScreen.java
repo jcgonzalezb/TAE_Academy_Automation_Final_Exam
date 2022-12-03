@@ -31,14 +31,10 @@ public class MapScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/categorySelectHeader\")")
     private AndroidElement categorySelectHeader;
 
-    @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*filterTitle.*\")")
-    @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Filter\")")
     private AndroidElement filterButton;
 
-    @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*toggleTitle.*\")")
-    @AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"Show List\")")
     private AndroidElement showListButton;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Hotels, Category, 10of11, button\")")
