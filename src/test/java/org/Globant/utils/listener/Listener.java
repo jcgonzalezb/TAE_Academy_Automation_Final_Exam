@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 
 /**
  * Represents the Listener which is used to show messages to the user based on
- * test success or failure.
+ * testpro success or failure.
  *
  * @author juancamilo.gonzalez
  * @version 1.0
@@ -14,8 +14,8 @@ import org.testng.ITestResult;
 public class Listener implements ITestListener {
 
     /**
-     * Shows the name of the test and the text [PASSED] when a test is successful.
-     * @param result The result of a test.
+     * Shows the name of the testpro and the text [PASSED] when a testpro is successful.
+     * @param result The result of a testpro.
      */
     @Override
     public void onTestSuccess(ITestResult result) {
@@ -23,8 +23,8 @@ public class Listener implements ITestListener {
     }
 
     /**
-     * Shows the name of the test and the text [FAILED] when a test is unsuccessful.
-     * @param result The result of a test.
+     * Shows the name of the testpro and the text [FAILED] when a testpro is unsuccessful.
+     * @param result The result of a testpro.
      */
     @Override
     public void onTestFailure(ITestResult result) {
