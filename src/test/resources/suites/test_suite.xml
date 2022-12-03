@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ESPN Final Test suite" verbose="1">
+    <listeners>
+        <listener class-name="org.Globant.utils.Listener.Listener"/>
+    </listeners>
+
+    <parameter name="url" value="https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud"/>
+    <test name="ESPN tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.Globant.runners.TestRunnerWeb"></class>
+        </classes>
+    </test>
+</suite>
