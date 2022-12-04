@@ -3,6 +3,7 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.Globant.reporting.Reporter;
 import org.Globant.utils.mobile.BaseScreen;
 import org.testng.Assert;
 
@@ -126,47 +127,37 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     public void privacyLegalScreenAssertions(){
 
-        log.info("Validate 'Privacy & Legal' option list");
+        Reporter.info("Validate 'Privacy & Legal' option list");
         Assert.assertTrue(listOfLegalOptionsIsDisplayed(), "'Privacy & Legal' option list not displayed");
 
-        log.info("Validate 'Privacy Policy' option");
+        Reporter.info("Validate 'Privacy Policy' option");
         Assert.assertTrue(privacyPolicyOptionIsDisplayed(), "'Privacy Policy' option not displayed");
 
-        log.info("Validate 'Terms of Use' option");
+        Reporter.info("Validate 'Terms of Use' option");
         Assert.assertTrue(termsOfUseOptionIsDisplayed(), "'Terms of Use' option not displayed");
 
-        log.info("Validate 'Supplemental Terms and Conditions' option");
+        Reporter.info("Validate 'Supplemental Terms and Conditions' option");
         Assert.assertTrue(supplementalTermsAndConditionsOptionIsDisplayed(), "'Supplemental Terms and Conditions' option not displayed");
 
-        log.info("Validate 'Legal Notices' option");
+        Reporter.info("Validate 'Legal Notices' option");
         Assert.assertTrue(legalNoticesOptionIsDisplayed(), "'Legal Notices' option not displayed");
 
-        log.info("Validate 'Property Rules' option");
+        Reporter.info("Validate 'Property Rules' option");
         Assert.assertTrue(propertyRulesOptionIsDisplayed(), "'Property Rules' option not displayed");
 
-        log.info("Validate 'Electronic Communications Disclosure' option");
+        Reporter.info("Validate 'Electronic Communications Disclosure' option");
         Assert.assertTrue(electronicCommunicationsDisclosureOptionIsDisplayed(), "'Electronic Communications Disclosure' option not displayed");
 
-        log.info("Validate 'Your California Privacy Rights' option");
+        Reporter.info("Validate 'Your California Privacy Rights' option");
         Assert.assertTrue(yourCaliforniaPrivacyRightsOptionIsDisplayed(), "'Your California Privacy Rights' option not displayed");
 
-        log.info("Validate 'Do Not Sell My Personal Information' option");
+        Reporter.info("Validate 'Do Not Sell My Personal Information' option");
         Assert.assertTrue(doNotSellMyPersonalInformationOptionIsDisplayed(), "'Do Not Sell My Personal Information' option not displayed");
 
-        log.info("Validate 'In-App Maps Subject to Google Terms and Conditions' option");
+        Reporter.info("Validate 'In-App Maps Subject to Google Terms and Conditions' option");
         Assert.assertTrue(googleTermsAndConditionsIsDisplayed(), "'In-App Maps Subject to Google Terms and Conditions' option not displayed");
 
-        log.info("Validate 'In-App Maps Subject to Google Privacy Policy' option");
+        Reporter.info("Validate 'In-App Maps Subject to Google Privacy Policy' option");
         Assert.assertTrue(googlePrivacyPolicyIsDisplayed(), "'In-App Maps Subject to Google Privacy Policy' option not displayed");
     }
-
-
-    }
-
-
-
-
-
-
-
 }
