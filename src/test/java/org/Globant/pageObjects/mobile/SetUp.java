@@ -15,21 +15,12 @@ import java.net.URL;
  *
  * @author helberth.bolivar
  */
-public class SetUp extends BaseScreen {
+public class SetUp {
 
     protected static TutorialScreen tutorialScreen;
     public static AndroidDriver<AndroidElement> driver;
     public Logger log = Logger.getLogger(SetUp.class);
 
-    /**
-     * Constructor method for standard screens object.
-     *
-     * @param driver : AndroidDriver
-     * @author Arley.Bolivar, Hans.Marquez
-     */
-    public SetUp(AndroidDriver<AndroidElement> driver) {
-        super(driver);
-    }
 
     public static void setUpStartApp() {
         tutorialScreen = new TutorialScreen(getDriver());
