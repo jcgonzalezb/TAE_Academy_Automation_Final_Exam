@@ -1,5 +1,6 @@
 package org.Globant.steps;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,6 +19,12 @@ public class DisneySteps {
     private PrivacyLegalScreen privacyLegalScreen;
 
     private BuyTicketsReserveDiningScreen buyTicketsReserveDiningScreen;
+
+
+    @After
+    public void closeApp() {
+        SetUp.mobileApplicationEnd();
+    }
 
     @Given("The user navigates to the dashboard page")
     public void theUserNavigatesToTheDashboardPage() {

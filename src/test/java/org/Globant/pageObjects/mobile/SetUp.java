@@ -59,7 +59,7 @@ public class SetUp extends BaseScreen {
      * @author Arley.Bolivar
      */
 
-    public void mobileApplicationEnd() {
+    public static void mobileApplicationEnd() {
         driver.quit();
     }
 
