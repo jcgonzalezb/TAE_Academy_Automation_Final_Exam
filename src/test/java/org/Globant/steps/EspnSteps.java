@@ -5,7 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.Globant.configuration.Driver;
+import org.Globant.configuration.web.Driver;
 import org.Globant.pageObjects.web.HomePage;
 import org.Globant.pageObjects.web.WatchPage;
 import org.Globant.reporting.Reporter;
