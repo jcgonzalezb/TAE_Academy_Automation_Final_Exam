@@ -17,6 +17,8 @@ public class DisneySteps {
 
     private PrivacyLegalScreen privacyLegalScreen;
 
+    private BuyTicketsReserveDiningScreen buyTicketsReserveDiningScreen;
+
     @Given("The user navigates to the dashboard page")
     public void theUserNavigatesToTheDashboardPage() {
         this.dashBoard = SetUp.loadDashBoardScreen();
@@ -49,34 +51,40 @@ public class DisneySteps {
 
     @When("checks all the options available")
     public void checksAllTheOptionsAvailable() {
-        this.moreOtherOptions = dashBoard.goToMoreOptionsScreen();
         Reporter.info("Start Navigation to More Options Screen");
+        this.moreOtherOptions = dashBoard.goToMoreOptionsScreen();
         moreOtherOptions.scrollDownToPrivacyLegal();
         moreOtherOptions.moreOtherOptionsScreenAssertions();
     }
 
     @And("taps on the Privacy & Legal option")
     public void tapsOnThePrivacyLegalOption() {
-        this.privacyLegalScreen = moreOtherOptions.goToPrivacyLegalScreen();
         Reporter.info("Start Navigation to Privacy & Legal Screen");
-        PrivacyLegalScreen privacyLegalScreen = moreOtherOptions.goToPrivacyLegalScreen();
-        privacyLegalScreen.privacyLegalScreenAssertions();
+        this.privacyLegalScreen = moreOtherOptions.goToPrivacyLegalScreen();
     }
 
     @Then("all Privacy & Legal options are displayed")
     public void allPrivacyLegalOptionsAreDisplayed() {
-
+        privacyLegalScreen.privacyLegalScreenAssertions();
     }
 
     @Given("The Buy Tickets Reserve Dining button is available")
     public void theBuyTicketsReserveDiningButtonIsAvailable() {
+        Reporter.info("Validate 'Buy Tickets Reserve Dining' button");
+        Assert.assertTrue(dashBoard.buyTicketsReserveDiningButtonIsDisplayed(), "Check 'Buy Tickets Reserve Dining' button not displayed");
     }
 
     @When("taps on the Buy Tickets Reserve Dining button")
     public void tapsOnTheBuyTicketsReserveDiningButton() {
+        Reporter.info("Start Navigation to 'Buy Tickets Reserve Dining' Screen");
+        this.buyTicketsReserveDiningScreen = dashBoard.goToBuyTicketsReserveDiningScreen();
+        Reporter.info("Validate 'Buy Tickets Reserve Dining' list");
+        Assert.assertTrue(buyTicketsReserveDiningScreen.buyTicketsReserveDiningListIsDisplayed(), "Check 'Buy Tickets Reserve Dining' list not displayed");
     }
 
     @Then("the Check Dining Availability button is displayed")
     public void theCheckDiningAvailabilityButtonIsDisplayed() {
+        Reporter.info("Validate 'Check Dining Availability' button");
+        Assert.assertTrue(buyTicketsReserveDiningScreen.checkDiningAvailabilityButtonIsDisplayed(), "Check 'Dining Availability' button not displayed");
     }
 }
