@@ -15,9 +15,4 @@ import org.Globant.pageObjects.mobile.*;
         )
 public class TestRunnerMobile {
 
-    @AfterClass(alwaysRun = true)
-    public void tearDownClass() {
-        SetUp.mobileApplicationEnd();
-    }
-
 }
