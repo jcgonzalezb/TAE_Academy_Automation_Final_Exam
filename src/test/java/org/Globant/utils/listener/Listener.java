@@ -11,7 +11,7 @@ import org.testng.ITestResult;
  * @author juancamilo.gonzalez
  * @version 1.0
  */
-public class Listener implements ITestListener {
+public abstract class Listener implements ITestListener {
 
     /**
      * Shows the name of the test and the text [PASSED] when a test is successful.
