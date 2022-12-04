@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Driver {
+public class UniqueWebDriver {
 
     private WebDriver driver;
 
-    public Driver(String browser) {
+    public UniqueWebDriver(String browser) {
         switch (browser.toLowerCase()){
             case "chrome":
                 WebDriverManager.chromedriver().setup();
@@ -23,6 +23,6 @@ public class Driver {
     }
 
     public WebDriver getDriver() {
-        return driver;
+        return this.driver;
     }
 }

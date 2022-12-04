@@ -5,7 +5,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.Globant.configuration.web.Driver;
+import org.Globant.configuration.web.UniqueWebDriver;
+
 import org.Globant.pageObjects.web.HomePage;
 import org.Globant.pageObjects.web.WatchPage;
 import org.Globant.reporting.Reporter;
@@ -15,7 +16,7 @@ import static java.lang.String.format;
 
 public class EspnSteps {
 
-    private static Driver driver;
+    private static UniqueWebDriver driver;
     protected HomePage home;
     protected WatchPage watchPage;
 
@@ -30,7 +31,7 @@ public class EspnSteps {
 
     @Given("The user navigates the ESPN landing page")
     public void theUserNavigatesTheESPNLandingPage() {
-        driver = new Driver(BROWSER);
+        driver = new UniqueWebDriver(BROWSER);
         Reporter.info("Deleting all the cookies");
         driver.getDriver().manage().deleteAllCookies();
         Reporter.info(format("Navigating to %s", URL));
