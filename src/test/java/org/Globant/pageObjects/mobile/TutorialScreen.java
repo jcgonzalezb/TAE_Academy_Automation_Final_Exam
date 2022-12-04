@@ -3,10 +3,7 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.HowToUseLocators;
-import org.Globant.utils.mobile.BaseScreen;
-
-import static io.appium.java_client.pagefactory.LocatorGroupStrategy.ALL_POSSIBLE;
+import org.Globant.configuration.mobile.MobileOperations;
 
 
 /**
@@ -15,7 +12,7 @@ import static io.appium.java_client.pagefactory.LocatorGroupStrategy.ALL_POSSIBL
  * @author Arley.Bolivar
  */
 
-public class TutorialScreen extends BaseScreen {
+public class TutorialScreen extends MobileOperations {
 
     /**
      * Constructor method.

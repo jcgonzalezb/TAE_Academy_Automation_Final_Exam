@@ -3,11 +3,11 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.Globant.configuration.mobile.MobileOperations;
 import org.Globant.reporting.Reporter;
-import org.Globant.utils.mobile.BaseScreen;
 import org.testng.Assert;
 
-public class PrivacyLegalScreen extends BaseScreen {
+public class PrivacyLegalScreen extends MobileOperations {
 
     /**
      * Constructor method.

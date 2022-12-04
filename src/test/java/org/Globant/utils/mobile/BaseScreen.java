@@ -20,7 +20,8 @@ public class BaseScreen {
     /**
      * The driver.
      */
-    protected final AndroidDriver<AndroidElement> driver;
+    private final AndroidDriver<AndroidElement> driver;
+    private final WebDriverWait wait;
 
     /**
      * The log.
@@ -35,6 +36,7 @@ public class BaseScreen {
      */
     public BaseScreen(AndroidDriver<AndroidElement> driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, 40L);
         PageFactory.initElements(new AppiumFieldDecorator(
                 driver, Duration.ofSeconds(0)), this);
     }
@@ -88,7 +90,7 @@ public class BaseScreen {
      * @author Hans.Marquez
      */
     public void click(AndroidElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebDriverWait wait = new WebDriverWait(driver, 15L);
         wait.until(ExpectedConditions.visibilityOf(element));
         element.click();
     }
@@ -100,7 +102,7 @@ public class BaseScreen {
      * @author Hans.Marquez
      */
     public boolean isElementAvailable(AndroidElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(45));
+        WebDriverWait wait = new WebDriverWait(driver, 45L);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return true;
@@ -116,8 +118,8 @@ public class BaseScreen {
      * @param timeout : int
      * @author Hans.Marquez
      */
-    public boolean isElementAvailable(AndroidElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    public boolean isElementAvailable(AndroidElement element, long timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
             return true;
