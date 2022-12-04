@@ -3,7 +3,10 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.Globant.reporting.Reporter;
 import org.Globant.utils.mobile.BaseScreen;
+import org.testng.Assert;
+
 
 
 public class MoreOptionsScreen extends BaseScreen {
@@ -101,6 +104,30 @@ public class MoreOptionsScreen extends BaseScreen {
     public PrivacyLegalScreen goToPrivacyLegalScreen() {
         click(privacyLegalButton);
         return new PrivacyLegalScreen(driver);
+    }
+
+    public void moreOtherOptionsScreenAssertions(){
+
+        Reporter.info("Validate 'My Profile' option");
+        Assert.assertTrue(myProfileButtonIsDisplayed(), "'My Profile' option not displayed");
+
+        Reporter.info("Validate 'Property Rules' option");
+        Assert.assertTrue(propertyRulesButtonIsDisplayed(), "'Property Rules' option not displayed");
+
+        Reporter.info("Validate 'Cast Compliment' option");
+        Assert.assertTrue(castComplimentButtonIsDisplayed(), "'Cast Compliment' option not displayed");
+
+        Reporter.info("Validate 'Link to Account' option");
+        Assert.assertTrue(linkToAccountButtonIsDisplayed(), "'Link to Account' option not displayed");
+
+        Reporter.info("Validate 'Car Locator' option");
+        Assert.assertTrue(carLocatorButtonIsDisplayed(), "'Car Locator' option not displayed");
+
+        Reporter.info("Validate 'Help' option");
+        Assert.assertTrue(helpButtonIsDisplayed(), "'Help' option not displayed");
+
+        Reporter.info("Validate 'Privacy & Legal' option");
+        Assert.assertTrue(privacyLegalButtonIsDisplayed(), "'Privacy & Legal' option not displayed");
     }
 }
 
