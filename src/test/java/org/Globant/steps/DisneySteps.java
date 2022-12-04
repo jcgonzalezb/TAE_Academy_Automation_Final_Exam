@@ -1,6 +1,7 @@
 package org.Globant.steps;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,6 +21,11 @@ public class DisneySteps {
 
     private BuyTicketsReserveDiningScreen buyTicketsReserveDiningScreen;
 
+
+    @Before
+    public void startApp(){
+        SetUp.environmentSetUp();
+    }
 
     @After
     public void closeApp() {

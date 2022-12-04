@@ -46,7 +46,7 @@ public class SetUp extends BaseScreen {
         ConfigCapabilities.deviceSetUp(capabilities);
         ConfigCapabilities.applicationSetUp(capabilities);
         try {
-            driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         } catch (MalformedURLException exception) {
             exception.printStackTrace();
         }
