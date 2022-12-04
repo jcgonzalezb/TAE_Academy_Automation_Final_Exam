@@ -38,17 +38,22 @@ public class DashBoardScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Buy tickets, Reserve Dining, Tab, 3of5\")")
     private AndroidElement buyTicketsReserveDiningButton;
 
-    /**
-     * @author Hans.Marquez
-     * Navigate to Map Screen from DashBoard Screen.
-     */
-    public MapScreen goToMapScreen() {
+
+    public void dismissMessages() {
         if (this.isElementAvailable(dismissWelcome, 25)){
             click(dismissWelcome);
         }
         if (this.isElementAvailable(dismissPreferenceUpdateButton, 25)){
             click(dismissPreferenceUpdateButton);
         }
+    }
+
+    /**
+     * @author Hans.Marquez
+     * Navigate to Map Screen from DashBoard Screen.
+     */
+    public MapScreen goToMapScreen() {
+        dismissMessages();
         click(mapButton);
         return new MapScreen(driver);
     }
@@ -65,12 +70,7 @@ public class DashBoardScreen extends BaseScreen {
      * Navigate to More Options Screen from DashBoard Screen.
      */
     public MoreOptionsScreen goToMoreOptionsScreen() {
-        if (this.isElementAvailable(dismissWelcome, 25)){
-            click(dismissWelcome);
-        }
-        if (this.isElementAvailable(dismissPreferenceUpdateButton, 25)){
-            click(dismissPreferenceUpdateButton);
-        }
+        dismissMessages();
         click(moreOptionsButton);
         return new MoreOptionsScreen(driver);
     }
@@ -87,12 +87,7 @@ public class DashBoardScreen extends BaseScreen {
      * Navigate to Buy Tickets Reserve Dining Screen from DashBoard Screen.
      */
     public BuyTicketsReserveDiningScreen goToBuyTicketsReserveDiningScreen() {
-        if (this.isElementAvailable(dismissWelcome, 25)){
-            click(dismissWelcome);
-        }
-        if (this.isElementAvailable(dismissPreferenceUpdateButton, 25)){
-            click(dismissPreferenceUpdateButton);
-        }
+        dismissMessages();
         click(buyTicketsReserveDiningButton);
         return new BuyTicketsReserveDiningScreen(driver);
     }
