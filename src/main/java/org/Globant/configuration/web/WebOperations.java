@@ -1,4 +1,4 @@
-package org.Globant.configuration;
+package org.Globant.configuration.web;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,7 @@ public class WebOperations {
 
     public WebOperations(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(40L));
+        this.wait = new WebDriverWait(driver, 40L);
         initElements(driver, this);
     }
 

@@ -1,4 +1,4 @@
-package org.Globant.configuration;
+package org.Globant.configuration.web;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
