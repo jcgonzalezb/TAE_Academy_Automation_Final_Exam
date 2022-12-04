@@ -3,7 +3,7 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.Globant.configuration.mobile.MobileOperations;
+import org.Globant.utils.mobile.BaseScreen;
 
 
 /**
@@ -11,7 +11,7 @@ import org.Globant.configuration.mobile.MobileOperations;
  *
  * @author Hans.Marquez
  */
-public class DashBoardScreen extends MobileOperations {
+public class DashBoardScreen extends BaseScreen {
 
     /**
      * Constructor method.

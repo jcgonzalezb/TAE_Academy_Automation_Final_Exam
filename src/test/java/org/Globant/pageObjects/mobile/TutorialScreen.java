@@ -3,7 +3,7 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.Globant.configuration.mobile.MobileOperations;
+import org.Globant.utils.mobile.BaseScreen;
 
 
 /**
@@ -12,7 +12,7 @@ import org.Globant.configuration.mobile.MobileOperations;
  * @author Arley.Bolivar
  */
 
-public class TutorialScreen extends MobileOperations {
+public class TutorialScreen extends BaseScreen {
 
     /**
      * Constructor method.
@@ -52,6 +52,6 @@ public class TutorialScreen extends MobileOperations {
         click(shareLocationButton);
         click(allowLocationButton);
         click(allowButton);
-        return new DashBoardScreen(driver);
+        return new DashBoardScreen(getDriver());
     }
 }

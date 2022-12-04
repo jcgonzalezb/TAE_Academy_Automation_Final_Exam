@@ -4,9 +4,10 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.Globant.configuration.mobile.MobileOperations;
+import org.Globant.utils.mobile.BaseScreen;
 
 
-public class BuyTicketsReserveDiningScreen extends MobileOperations {
+public class BuyTicketsReserveDiningScreen extends BaseScreen {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/actionSheetListView\")")
     private AndroidElement buyTicketsReserveDiningList;

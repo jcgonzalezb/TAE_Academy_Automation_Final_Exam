@@ -3,13 +3,13 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.Globant.configuration.mobile.MobileOperations;
 import org.Globant.reporting.Reporter;
+import org.Globant.utils.mobile.BaseScreen;
 import org.testng.Assert;
 
 
 
-public class MoreOptionsScreen extends MobileOperations {
+public class MoreOptionsScreen extends BaseScreen {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"My Profile button\")")
     private AndroidElement myProfileButton;
