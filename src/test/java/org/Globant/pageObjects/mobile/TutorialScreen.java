@@ -33,7 +33,6 @@ public class TutorialScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Share Location\")")
     private AndroidElement shareLocationButton;
 
-    @HowToUseLocators(androidAutomation = ALL_POSSIBLE)
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*android:id/button1\")")
     private AndroidElement allowLocationButton;
 
