@@ -2,14 +2,14 @@
 
 <suite name="ESPN Final Test suite" verbose="1">
     <listeners>
-        <listener class-name="org.Globant.utils.Listener.Listener"/>
+        <listener class-name="org.Globant.utils.listener.Listener"/>
     </listeners>
 
     <parameter name="url" value="https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud"/>
     <test name="ESPN tests">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="org.Globant.runners.TestRunnerWeb"></class>
+            <class name="org.Globant.runners.TestRunnerMobile"></class>
         </classes>
     </test>
 </suite>
