@@ -3,6 +3,7 @@ package org.Globant.pageObjects.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.Globant.reporting.Reporter;
 import org.Globant.utils.mobile.BaseScreen;
 
 
@@ -40,10 +41,10 @@ public class DashBoardScreen extends BaseScreen {
 
 
     public void dismissMessages() {
-        if (this.isElementAvailable(dismissWelcome, 25)){
+        if (this.isElementAvailable(dismissWelcome, 25L)){
             click(dismissWelcome);
         }
-        if (this.isElementAvailable(dismissPreferenceUpdateButton, 25)){
+        if (this.isElementAvailable(dismissPreferenceUpdateButton, 10L)){
             click(dismissPreferenceUpdateButton);
         }
     }
@@ -55,6 +56,7 @@ public class DashBoardScreen extends BaseScreen {
     public MapScreen goToMapScreen() {
         dismissMessages();
         click(mapButton);
+        Reporter.info("The Map button is displayed.");
         return new MapScreen(getDriver());
     }
 

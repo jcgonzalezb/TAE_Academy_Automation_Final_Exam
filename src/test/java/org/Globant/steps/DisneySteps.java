@@ -24,31 +24,37 @@ public class DisneySteps {
 
     @Before
     public void startApp(){
+        Reporter.info("Navigating to the Tutorial Screen.");
         SetUp.environmentSetUp();
     }
 
     @After
     public void closeApp() {
         SetUp.mobileApplicationEnd();
+        Reporter.info("Application closed.");
     }
 
     @Given("The user navigates to the dashboard page")
     public void theUserNavigatesToTheDashboardPage() {
+        Reporter.info("Navigating to the Dashboard Screen.");
         this.dashBoard = SetUp.loadDashBoardScreen();
     }
 
     @Given("The user navigates to check the Disneyland Map")
     public void theUserNavigatesToCheckTheDisneylandMap() {
+        Reporter.info("Navigating to the Disneyland Map.");
         this.map = dashBoard.goToMapScreen();
-        Reporter.info("Validate Disneyland map on screen");
-        Assert.assertTrue(map.disneylandMapIsDisplayed(), "Disneyland map not displayed");
+        Assert.assertTrue(map.disneylandMapIsDisplayed(), "The Disneyland map is not displayed.");
+        Reporter.info("The Disneyland map is displayed.");
     }
 
     @When("taps the category list")
     public void tapsTheCategoryList() {
-        Assert.assertTrue(map.categoryButtonIsDisplayed(), "Category button not displayed");
+        Assert.assertTrue(map.categoryButtonIsDisplayed(), "The Category button is not displayed");
+        Reporter.info("The Category button is displayed.");
         map.clickOnCategoryList();
-        Assert.assertTrue(map.selectCategoryTitleIsDisplayed(), "Select Category title not displayed");
+        Assert.assertTrue(map.selectCategoryTitleIsDisplayed(), "The select Category title not displayed");
+        Reporter.info("The Category button is displayed.");
     }
 
     @Then("the Hotels option should be available in the category list")
