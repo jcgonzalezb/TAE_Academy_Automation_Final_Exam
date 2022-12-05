@@ -80,7 +80,7 @@ public class DisneySteps {
 
     @When("checks all the options available")
     public void checksAllTheOptionsAvailable() {
-        Reporter.info("Navigating to More Options Screen.");
+        Reporter.info("Navigating to the More Options Screen.");
         this.moreOtherOptions = dashBoard.goToMoreOptionsScreen();
         Reporter.info("Scroll down until bottom of the screen.");
         moreOtherOptions.scrollDownToPrivacyLegal();
