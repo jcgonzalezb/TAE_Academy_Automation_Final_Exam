@@ -2,10 +2,9 @@ package org.Globant.pageObjects.mobile;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import org.Globant.utils.mobile.BaseScreen;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.Globant.utils.configuration.ConfigCapabilities;
+import org.Globant.configuration.mobile.UniqueMobileDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -18,8 +17,7 @@ import java.net.URL;
 public class SetUp {
 
     protected static TutorialScreen tutorialScreen;
-    public static AndroidDriver<AndroidElement> driver;
-    public Logger log = Logger.getLogger(SetUp.class);
+    public static UniqueMobileDriver driver;
 
 
     public static void setUpStartApp() {
@@ -37,7 +35,7 @@ public class SetUp {
         ConfigCapabilities.deviceSetUp(capabilities);
         ConfigCapabilities.applicationSetUp(capabilities);
         try {
-            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            driver = new UniqueMobileDriver(new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities));
         } catch (MalformedURLException exception) {
             exception.printStackTrace();
         }
@@ -51,7 +49,7 @@ public class SetUp {
      */
 
     public static void mobileApplicationEnd() {
-        driver.quit();
+        driver.getDriver().quit();
     }
 
     /**
@@ -61,7 +59,7 @@ public class SetUp {
      * @author Arley.Bolivar
      */
     public static AndroidDriver<AndroidElement> getDriver() {
-        return driver;
+        return driver.getDriver();
     }
 
     /**
