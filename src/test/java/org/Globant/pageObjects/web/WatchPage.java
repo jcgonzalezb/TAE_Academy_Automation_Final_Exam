@@ -8,12 +8,26 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+/**
+ * Represents the ESPN watch page.
+ *
+ * @author juancamilo.gonzalez
+ * @version 1.0
+ */
 public class WatchPage extends BasePage {
 
+    /**
+     * Constructor method for the WatchPage class.
+     * @param driver The driver that controls the behaviour
+     * of a web browser.
+     */
     public WatchPage(WebDriver driver){
         super(driver);
     }
 
+    /**
+     * The first Carousel on the watch page
+     */
     @FindBy(css="#fittPageContainer > section > div:nth-child(1) > section")
     private WebElement firstCarousel;
 

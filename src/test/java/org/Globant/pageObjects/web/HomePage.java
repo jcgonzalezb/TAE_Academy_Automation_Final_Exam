@@ -19,6 +19,8 @@ public class HomePage extends BasePage {
 
     /**
      * Constructor method for the HomePage class.
+     * @param driver The driver that controls the behaviour
+     * of a web browser.
      */
     public HomePage(WebDriver driver){
         super(driver);
