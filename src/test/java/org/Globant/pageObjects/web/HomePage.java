@@ -8,37 +8,73 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import static java.lang.String.format;
 
+/**
+ * Represents the ESPN homepage.
+ *
+ * @author juancamilo.gonzalez
+ * @version 1.0
+ */
 public class HomePage extends BasePage {
 
+    /**
+     * Constructor method for the HomePage class.
+     */
     public HomePage(WebDriver driver){
         super(driver);
     }
 
+    /**
+     * The principal frame from ESPN homepage.
+     */
     @FindBy(css= "body > div.promo-banner-container > iframe")
     private WebElement bannerIframe;
+
+    /**
+     * A banner that appears when loading the ESPN homepage.
+     */
     @FindBy(css="#fittPageContainer > section > div.PromoBanner__CloseBtn")
     private WebElement bannerCloseBtn;
 
+    /**
+     * The icon to access user information
+     */
     @FindBy(id="global-user-trigger")
     private WebElement userIcon;
 
+    /**
+     * The user options menu
+     */
     @FindBy(className = "global-user-container")
     private WebElement menu;
 
+    /**
+     * The user options menu
+     */
     @FindBy(css= "div.global-user:last-child ul.account-management > li:last-child > a")
     private WebElement logInText;
 
+    /**
+     * The modal to insert user credentials
+     */
     @FindBy(css = "div#oneid-wrapper > iframe#oneid-iframe")
     private WebElement logInModal;
 
+    /**
+     * The ESPN logo
+     */
     @FindBy(id ="logo")
     private WebElement espnLogo;
 
+    /**
+     * The submit button
+     */
     @FindBy (id = "BtnSubmit")
     private WebElement submitButton;
 
+    /**
+     * The ESPN
+     */
     @FindBy(id = "InputLoginValue")
     private WebElement usernameValue;
 
