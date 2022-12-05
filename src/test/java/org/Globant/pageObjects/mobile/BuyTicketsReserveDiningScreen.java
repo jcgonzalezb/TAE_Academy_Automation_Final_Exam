@@ -9,6 +9,8 @@ import org.Globant.utils.mobile.BaseScreen;
 
 public class BuyTicketsReserveDiningScreen extends BaseScreen {
 
+
+
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/actionSheetListView\")")
     private AndroidElement buyTicketsReserveDiningList;
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Check Dining Availability, 1 of 7, button\")")

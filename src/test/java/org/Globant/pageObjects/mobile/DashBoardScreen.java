@@ -55,7 +55,7 @@ public class DashBoardScreen extends BaseScreen {
     public MapScreen goToMapScreen() {
         dismissMessages();
         click(mapButton);
-        return new MapScreen(driver);
+        return new MapScreen(getDriver());
     }
 
     /**
@@ -72,7 +72,7 @@ public class DashBoardScreen extends BaseScreen {
     public MoreOptionsScreen goToMoreOptionsScreen() {
         dismissMessages();
         click(moreOptionsButton);
-        return new MoreOptionsScreen(driver);
+        return new MoreOptionsScreen(getDriver());
     }
 
     /**
@@ -89,6 +89,6 @@ public class DashBoardScreen extends BaseScreen {
     public BuyTicketsReserveDiningScreen goToBuyTicketsReserveDiningScreen() {
         dismissMessages();
         click(buyTicketsReserveDiningButton);
-        return new BuyTicketsReserveDiningScreen(driver);
+        return new BuyTicketsReserveDiningScreen(getDriver());
     }
 }

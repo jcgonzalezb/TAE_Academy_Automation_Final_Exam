@@ -103,7 +103,7 @@ public class MoreOptionsScreen extends BaseScreen {
      */
     public PrivacyLegalScreen goToPrivacyLegalScreen() {
         click(privacyLegalButton);
-        return new PrivacyLegalScreen(driver);
+        return new PrivacyLegalScreen(getDriver());
     }
 
     public void moreOtherOptionsScreenAssertions(){
