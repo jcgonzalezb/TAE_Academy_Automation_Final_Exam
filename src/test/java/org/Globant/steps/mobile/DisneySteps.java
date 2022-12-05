@@ -1,4 +1,4 @@
-package org.Globant.steps;
+package org.Globant.steps.mobile;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
