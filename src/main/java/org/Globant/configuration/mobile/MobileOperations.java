@@ -9,11 +9,12 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
+import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class MobileOperations {
     private final AndroidDriver<AndroidElement> driver;
@@ -28,7 +29,7 @@ public class MobileOperations {
     public MobileOperations(AndroidDriver<AndroidElement> driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, 40L);
-        PageFactory.initElements(new AppiumFieldDecorator(
+        initElements(new AppiumFieldDecorator(
                 driver, Duration.ofSeconds(0)), this);
     }
 
@@ -72,8 +73,8 @@ public class MobileOperations {
      */
     @SuppressWarnings({"rawtypes", "unused"})
     public void swipeVertical(float percentage) {
-        Dimension windowSize = driver.manage().window().getSize();
-        TouchAction ta = new TouchAction(driver);
+        Dimension windowSize = getDriver().manage().window().getSize();
+        TouchAction ta = new TouchAction(getDriver());
         ta.press(PointOption.point(207, 582)).moveTo(PointOption.point(
                 8,-360)).release().perform();
     }
