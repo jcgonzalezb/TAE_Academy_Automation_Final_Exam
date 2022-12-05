@@ -1,4 +1,4 @@
-package org.Globant.steps;
+package org.Globant.steps.web;
 
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.en.And;
