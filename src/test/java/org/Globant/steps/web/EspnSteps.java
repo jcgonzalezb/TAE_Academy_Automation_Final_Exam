@@ -13,10 +13,10 @@ import org.Globant.reporting.Reporter;
 import org.testng.Assert;
 
 import static java.lang.String.format;
+import static org.Globant.pageObjects.web.SetUpWeb.home;
 
 public class EspnSteps {
 
-    private HomePage home;
     private WatchPage watchPage;
     private final String USERNAME = "Juan!";
 
