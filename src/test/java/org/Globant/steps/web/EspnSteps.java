@@ -36,6 +36,7 @@ public class EspnSteps {
         home.insideLogInModal();
         //home.signUpModalValidate();
         //home.signUpProcedure();
+        Reporter.info("Sign Up procedure completed!");
     }
 
     @And("the user navigates to the Watch page")
@@ -61,7 +62,7 @@ public class EspnSteps {
     public void theUserReturnsToTheESPNLandingPage() {
         home.switchToMain();
         home.mouseHoverUserIcon();
-        home.accessingUserPanel();
+        //home.accessingUserPanel();
         Assert.assertEquals(home.userNameConfirmation(), USERNAME, "The username is not correct");
         Reporter.info("The username is correct");
     }
@@ -69,14 +70,15 @@ public class EspnSteps {
     @And("the user logs out")
     public void theUserLogsOut() {
         home.logOutOption();
-        Reporter.info("Log Out completed!");
-        home.switchToMain();
+        Reporter.info("Log Out procedure completed!");
     }
 
     @Then("the user's name does not appeared in the welcome message")
     public void theUserSNameDoesNotAppearedInTheWelcomeMessage() {
+        home.switchToMain();
         home.mouseHoverUserIcon();
-        home.accessingUserPanel();
+        home.LogInOptionConfirmation();
+        //home.accessingUserPanel();
         Assert.assertEquals(home.displayUsername(), "Welcome!", "The element 'Nav text' still has text: 'Welcome!' with user name.");
         Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
     }
