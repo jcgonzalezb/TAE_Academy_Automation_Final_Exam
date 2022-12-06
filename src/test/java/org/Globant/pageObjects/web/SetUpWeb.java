@@ -10,7 +10,7 @@ public class SetUpWeb {
 
     private static UniqueWebDriver driver;
 
-    protected static HomePage home;
+    public static HomePage home;
 
     private static final String URL ="https://www.espnqa.com/?src=com&_adblock=true&espn=cloud";
     private static final String BROWSER = "chrome";

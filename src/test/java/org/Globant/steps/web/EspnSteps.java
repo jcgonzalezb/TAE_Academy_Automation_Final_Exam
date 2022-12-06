@@ -42,7 +42,7 @@ public class EspnSteps {
     public void theUserNavigatesToTheWatchPage() {
         home.switchToMain();
         Reporter.info("Navigating the ESPN Watch Page");
-        WatchPage watchPage = home.watchPage();
+        this.watchPage = home.watchPage();
         Assert.assertTrue(watchPage.isFirstCarouselDisplayed(),
                 "The first carousel is not present.");
         Reporter.info("The first carousel is present.");
