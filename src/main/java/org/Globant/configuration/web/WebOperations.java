@@ -15,7 +15,7 @@ public class WebOperations {
 
     public WebOperations(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, 40L);
+        this.wait = new WebDriverWait(driver, 50L);
         initElements(driver, this);
     }
 
