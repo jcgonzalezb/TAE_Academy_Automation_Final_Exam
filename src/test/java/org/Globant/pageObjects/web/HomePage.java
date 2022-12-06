@@ -146,6 +146,14 @@ public class HomePage extends BasePage {
         visibilityClickElement(logInText);
     }
 
+    public void LogInOptionConfirmation() {
+        super.waitForVisibility(logInText);
+        super.waitForClickable(logInText);
+        Reporter.info("Log In text available");
+    }
+
+
+
     public boolean isLogInModalDisplayed(){
         super.waitForVisibility(logInModal);
         return logInModal.isDisplayed();
@@ -255,7 +263,6 @@ public class HomePage extends BasePage {
     }
 
     public void logOutOption() {
-        accessingUserPanel();
         super.waitForVisibility(logOutText);
         super.clickElement(logOutText);
     }
@@ -282,6 +289,7 @@ public class HomePage extends BasePage {
         super.clickElement(userIcon);
         System.out.println("click on userIcon");
         super.waitForVisibility(menu);
+        System.out.println("Menu displayed");
     }
 
     public String userNameConfirmation ()    {
@@ -289,6 +297,7 @@ public class HomePage extends BasePage {
         return userNameConfirmation.getText();
     }
     public String displayUsername () {
+        super.waitForVisibility(displayUserName);
         return displayUserName.getText();
     }
 
