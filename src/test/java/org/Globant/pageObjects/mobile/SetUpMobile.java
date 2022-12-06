@@ -14,7 +14,7 @@ import java.net.URL;
  *
  * @author helberth.bolivar
  */
-public class SetUp {
+public class SetUpMobile {
 
     protected static TutorialScreen tutorialScreen;
     public static UniqueMobileDriver driver;
