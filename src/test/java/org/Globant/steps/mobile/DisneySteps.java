@@ -25,19 +25,19 @@ public class DisneySteps {
     @Before
     public void startApp(){
         Reporter.info("Navigating to the Tutorial Screen.");
-        SetUp.environmentSetUp();
+        SetUpMobile.environmentSetUp();
     }
 
     @After
     public void closeApp() {
-        SetUp.mobileApplicationEnd();
+        SetUpMobile.mobileApplicationEnd();
         Reporter.info("Application closed.");
     }
 
     @Given("The user navigates to the dashboard page")
     public void theUserNavigatesToTheDashboardPage() {
         Reporter.info("Navigating to the Dashboard Screen.");
-        this.dashBoard = SetUp.loadDashBoardScreen();
+        this.dashBoard = SetUpMobile.loadDashBoardScreen();
     }
 
     @Given("The user navigates to check the Disneyland Map")

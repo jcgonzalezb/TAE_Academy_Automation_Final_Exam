@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import org.Globant.configuration.web.UniqueWebDriver;
 
 import org.Globant.pageObjects.web.HomePage;
+import org.Globant.pageObjects.web.SetUpWeb;
 import org.Globant.pageObjects.web.WatchPage;
 import org.Globant.reporting.Reporter;
 import org.testng.Assert;
@@ -15,27 +16,13 @@ import static java.lang.String.format;
 
 public class EspnSteps {
 
-    private static UniqueWebDriver driver;
-    protected HomePage home;
-    protected WatchPage watchPage;
-
-    private final String URL ="https://www.espnqa.com/?src=com&_adblock=true&espn=cloud";
-    private static final String BROWSER = "chrome";
+    private HomePage home;
+    private WatchPage watchPage;
     private final String USERNAME = "Juan!";
-
-
 
     @Given("the user navigates the ESPN landing page")
     public void theUserNavigatesTheESPNLandingPage() {
-        driver = new UniqueWebDriver(BROWSER);
-        Reporter.info("Deleting all the cookies");
-        driver.getDriver().manage().deleteAllCookies();
-        Reporter.info(format("Navigating to %s", URL));
-        Reporter.info("Navigating the ESPN Landing Page");
-        driver.getDriver().get(URL);
-        driver.getDriver().manage().window().maximize();
-        home = new HomePage(driver.getDriver());
-        //home.closeBanner();
+        SetUpWeb.setUpWeb();
         home.LogInOption();
         Assert.assertTrue(home.isLogInModalDisplayed(),
                 "The User Modal is not present.");
@@ -46,8 +33,9 @@ public class EspnSteps {
 
     @When("the user enters valid credentials for sign up")
     public void theUserEntersValidCredentialsForSignUp() {
-        home.signUpModalValidate();
-        home.signUpProcedure();
+        home.insideLogInModal();
+        //home.signUpModalValidate();
+        //home.signUpProcedure();
     }
 
     @And("the user navigates to the Watch page")
@@ -66,11 +54,11 @@ public class EspnSteps {
                 "The 'X' button to close is not present.");
         Reporter.info("The 'X' button to close is present.");
         watchPage.clickOnxButton();
+        watchPage.returnToHome();
     }
 
     @And("the user returns to the ESPN landing page")
     public void theUserReturnsToTheESPNLandingPage() {
-        watchPage.returnToHome();
         home.switchToMain();
         home.mouseHoverUserIcon();
         home.accessingUserPanel();
