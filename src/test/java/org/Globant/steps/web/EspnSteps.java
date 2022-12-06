@@ -75,7 +75,6 @@ public class EspnSteps {
     @Then("the user's name does not appeared in the welcome message")
     public void theUserSNameDoesNotAppearedInTheWelcomeMessage() {
         home.mouseHoverUserIcon();
-        home.accessingUserPanel();
         Assert.assertEquals(home.displayUsername(), "Welcome!", "The element 'Nav text' still has text: 'Welcome!' with user name.");
         Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
     }
