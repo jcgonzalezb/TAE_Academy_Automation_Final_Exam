@@ -127,7 +127,6 @@ public class HomePage extends BasePage {
 
     public void visibilityClickElement(WebElement element){
         super.waitForVisibility(element);
-        super.waitForClickable(element);
         super.clickElement(element);
     }
 
@@ -137,8 +136,9 @@ public class HomePage extends BasePage {
     }
 
     public void accessingUserPanel() {
-        visibilityClickElement(userIcon);
-        visibilityClickElement(menu);
+        super.waitForVisibility(userIcon);
+        super.clickElement(userIcon);
+        super.waitForVisibility(menu);
     }
 
     public void LogInOption() {
@@ -279,8 +279,9 @@ public class HomePage extends BasePage {
         super.waitForVisibility(userIcon);
         Actions action = new Actions(getDriver());
         action.moveToElement(userIcon).perform();
-        super.waitForClickable(userIcon);
         super.clickElement(userIcon);
+        System.out.println("click on userIcon");
+        super.waitForVisibility(menu);
     }
 
     public String userNameConfirmation ()    {
