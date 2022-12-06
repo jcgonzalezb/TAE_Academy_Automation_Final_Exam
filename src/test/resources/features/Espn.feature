@@ -5,9 +5,9 @@ Feature: Sign up and Log Out functionalities
   from the ESPN landing page successfully.
 
   Scenario: Sign Up and Log Out from ESPN page
-    Given The user navigates the ESPN landing page
-    When enters valid credentials for sign up
-    And navigates to the Watch page
-    And returns to the ESPN landing page
-    And logs out
-    Then his name does not appeared in the welcome message
+    Given the user navigates the ESPN landing page
+    When the user enters valid credentials for sign up
+    And the user navigates to the Watch page
+    And the user returns to the ESPN landing page
+    And the user logs out
+    Then the user's name does not appeared in the welcome message
