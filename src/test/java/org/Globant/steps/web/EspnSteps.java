@@ -62,7 +62,8 @@ public class EspnSteps {
     public void theUserReturnsToTheESPNLandingPage() {
         home.switchToMain();
         home.mouseHoverUserIcon();
-        Assert.assertEquals(home.userNameConfirmation(), USERNAME, "The username is not correct");
+        Assert.assertEquals(home.userNameConfirmation(),
+                USERNAME, "The username is not correct");
         Reporter.info("The username is correct");
     }
 
@@ -77,7 +78,8 @@ public class EspnSteps {
         home.switchToMain();
         home.mouseHoverUserIcon();
         //home.LogInOptionConfirmation();
-        Assert.assertEquals(home.displayUsername(), "Welcome!", "The element 'Nav text' still has text: 'Welcome!' with user name.");
+        Assert.assertEquals(home.displayUsername(), "Welcome!",
+                "The element 'Nav text' still has text: 'Welcome!' with user name.");
         Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
     }
 }
