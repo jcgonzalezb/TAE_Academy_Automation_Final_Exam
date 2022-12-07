@@ -8,6 +8,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import static org.Globant.pageObjects.web.SetUpWeb.home;
+
 
 /**
  * Represents the ESPN homepage.
@@ -143,16 +145,11 @@ public class HomePage extends BasePage {
 
     public void LogInOption() {
         accessingUserPanel();
+        Assert.assertEquals(home.displayUsername(), "Welcome!",
+                "The element 'Nav text' still has text: 'Welcome!' with user name.");
+        Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
         visibilityClickElement(logInText);
     }
-
-    public void LogInOptionConfirmation() {
-        super.waitForVisibility(logInText);
-        super.waitForClickable(logInText);
-        Reporter.info("Log In text available");
-    }
-
-
 
     public boolean isLogInModalDisplayed(){
         super.waitForVisibility(logInModal);
@@ -272,7 +269,7 @@ public class HomePage extends BasePage {
     public void insertCredentials () {
         String username = "juantesat1@hotmail.com";
         super.typeOnInput(usernameValue, username);
-        String password = "auvR$k7tz9vJuH$";
+        String password = "8dmwQirn+cR02";
         super.typeOnInput(passwordValue, password);
         super.clickElement(submitButton);
     }
