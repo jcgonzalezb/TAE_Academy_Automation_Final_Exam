@@ -2,10 +2,9 @@ package org.Globant.runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = "src/test/resources/featuresx",
         glue = {"org.Globant.steps.mobile"}
 )
 
