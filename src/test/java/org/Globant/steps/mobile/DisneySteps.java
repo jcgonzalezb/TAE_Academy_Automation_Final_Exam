@@ -22,18 +22,6 @@ public class DisneySteps {
     private BuyTicketsReserveDiningScreen buyTicketsReserveDiningScreen;
 
 
-    @Before
-    public void startApp(){
-        Reporter.info("Navigating to the Tutorial Screen.");
-        SetUpMobile.environmentSetUp();
-    }
-
-    @After
-    public void closeApp() {
-        SetUpMobile.mobileApplicationEnd();
-        Reporter.info("Application closed.");
-    }
-
     @Given("The user navigates to the dashboard page")
     public void theUserNavigatesToTheDashboardPage() {
         Reporter.info("Navigating to the Dashboard Screen.");
