@@ -4,6 +4,7 @@ Feature: Sign up and Log Out functionalities
   the user should be able to sign up and log out
   from the ESPN landing page successfully.
 
+  @webTesting
   Scenario: Sign Up and Log Out from ESPN page
     Given the user navigates the ESPN landing page
     When the user enters valid credentials for sign up

@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"org.Globant.steps.web"}
+        glue = {"org.Globant.steps.web"},
+        tags = "@webTesting"
 )
 
 public class RunCucumberWeb extends AbstractTestNGCucumberTests {
