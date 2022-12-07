@@ -8,8 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import static org.Globant.pageObjects.web.SetUpWeb.home;
-
 
 /**
  * Represents the ESPN homepage.
@@ -145,7 +143,7 @@ public class HomePage extends BasePage {
 
     public void LogInOption() {
         accessingUserPanel();
-        Assert.assertEquals(home.displayUsername(), "Welcome!",
+        Assert.assertEquals(displayUsername(), "Welcome!",
                 "The element 'Nav text' still has text: 'Welcome!' with user name.");
         Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
         visibilityClickElement(logInText);
