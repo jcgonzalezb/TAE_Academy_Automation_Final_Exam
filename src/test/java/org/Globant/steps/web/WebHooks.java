@@ -29,7 +29,7 @@ public class WebHooks {
     }
 
     @After
-    public void teardown() { driver.getDriver().quit(); }
+    public void closeBrowser() { driver.getDriver().quit(); }
 
 
     public static WebDriver getDriver() {
