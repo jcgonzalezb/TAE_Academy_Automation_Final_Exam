@@ -4,16 +4,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.Globant.configuration.web.UniqueWebDriver;
 
 import org.Globant.pageObjects.web.HomePage;
-import org.Globant.pageObjects.web.SetUpWeb;
 import org.Globant.pageObjects.web.WatchPage;
 import org.Globant.reporting.Reporter;
 import org.testng.Assert;
 
-import static java.lang.String.format;
-import static org.Globant.pageObjects.web.SetUpWeb.home;
 import static org.Globant.steps.web.WebHooks.getDriver;
 
 public class EspnSteps {
