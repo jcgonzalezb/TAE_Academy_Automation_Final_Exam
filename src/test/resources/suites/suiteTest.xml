@@ -1,16 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="TAE Academy Automation Final Exam" verbose="1">
-    <listeners>
-        <listener class-name="org.Globant.utils.listener.Listener"/>
-    </listeners>
 
-    <parameter name="url" value="https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud"/>
-    <test name="ESPN and Disneyland tests">
-        <parameter name="browser" value="chrome"/>
+    <test name="Disneyland tests">
         <classes>
-            <class name="org.Globant.runners.RunCucumberWeb"></class>
             <class name="org.Globant.runners.RunCucumberMobile"></class>
         </classes>
     </test>
+    <test name="ESPN test">
+        <classes>
+            <class name="org.Globant.runners.RunCucumberWeb"></class>
+        </classes>
+    </test>
+
+
+
+
 </suite>
