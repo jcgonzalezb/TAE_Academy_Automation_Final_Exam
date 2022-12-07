@@ -7,9 +7,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features/Espn.feature",
-        glue = {"src/test/java/org/Globant/steps"}
+        glue = {"org.Globant.steps"}
 )
 
-public class TestRunnerWeb {
-
+public class RunnerTestWeb {
 }
