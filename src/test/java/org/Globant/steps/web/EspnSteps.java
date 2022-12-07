@@ -14,15 +14,17 @@ import org.testng.Assert;
 
 import static java.lang.String.format;
 import static org.Globant.pageObjects.web.SetUpWeb.home;
+import static org.Globant.steps.web.WebHooks.getDriver;
 
 public class EspnSteps {
 
+    private HomePage home;
     private WatchPage watchPage;
     private final String USERNAME = "Juan!";
 
     @Given("the user navigates the ESPN landing page")
     public void theUserNavigatesTheESPNLandingPage() {
-        SetUpWeb.setUpWeb();
+        this.home = new HomePage(getDriver());
         home.LogInOption();
         Assert.assertTrue(home.isLogInModalDisplayed(),
                 "The User Modal is not present.");
