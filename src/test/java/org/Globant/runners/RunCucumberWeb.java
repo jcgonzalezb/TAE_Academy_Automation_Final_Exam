@@ -1,5 +1,6 @@
 package org.Globant.runners;
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,8 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features/Espn.feature",
-        glue = {"org.Globant.steps"}
+        glue = {"org.Globant.steps.web"}
 )
 
-public class RunnerTestWeb {
+public class RunCucumberWeb extends AbstractTestNGCucumberTests {
 }

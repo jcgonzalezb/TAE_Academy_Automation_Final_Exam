@@ -9,8 +9,8 @@
     <test name="ESPN and Disneyland tests">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="org.Globant.runners.RunnerTestWeb"></class>
-            <class name="org.Globant.runners.RunnerTestMobile"></class>
+            <class name="org.Globant.runners.RunCucumberWeb"></class>
+            <class name="org.Globant.runners.RunCucumberMobile"></class>
         </classes>
     </test>
 </suite>
