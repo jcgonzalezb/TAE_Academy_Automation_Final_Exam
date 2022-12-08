@@ -16,7 +16,6 @@ public class EspnSteps {
 
     private HomePage home;
     private WatchPage watchPage;
-    private final String USERNAME = "Juan!";
 
     @Given("the user navigates the ESPN landing page")
     public void theUserNavigatesTheESPNLandingPage() {
@@ -63,7 +62,7 @@ public class EspnSteps {
         Reporter.info("Validate welcome message with username on the user panel.");
         home.mouseHoverUserIcon();
         Assert.assertEquals(home.userNameConfirmation(),
-                USERNAME, "The username is not correct.");
+                home.registeredUserName(), "The username is not correct.");
         Reporter.info("The username is correct.");
     }
 

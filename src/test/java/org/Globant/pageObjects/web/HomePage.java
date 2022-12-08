@@ -349,6 +349,12 @@ public class HomePage extends BasePage {
         super.waitForVisibility(userNameConfirmation);
         return userNameConfirmation.getText();
     }
+
+    public String registeredUserName(){
+        String userName = FIRSTNAME + "!";
+        return userName;
+    }
+
     public String displayUsername () {
         super.waitForVisibility(displayUserName);
         return displayUserName.getText();
@@ -374,12 +380,8 @@ public class HomePage extends BasePage {
         return password;
     }
 
-    public static String generateRandomEmail() {
+    public String generateRandomEmail() {
         Faker faker = new Faker();
         return faker.internet().emailAddress();
     }
-
-
-
-
 }
