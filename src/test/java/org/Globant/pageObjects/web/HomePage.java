@@ -75,72 +75,104 @@ public class HomePage extends BasePage {
     private WebElement submitButton;
 
     /**
-     * The ESPN
+     * The form space for username
      */
     @FindBy(id = "InputLoginValue")
     private WebElement usernameValue;
 
+    /**
+     * The form space for password
+     */
     @FindBy(id = "InputPassword")
     private WebElement passwordValue;
 
+    /**
+     * The Sign up button
+     */
     @FindBy(id = "BtnCreateAccount")
     private WebElement signUpButton;
 
+    /**
+     * The title of the Sign Up modal
+     */
     @FindBy(id = "Title")
     private WebElement createAccountTitle;
 
+    /**
+     * The form space for first name
+     */
     @FindBy(id = "InputFirstName")
     private WebElement inputFirstName;
 
+    /**
+     * The form space for last name
+     */
     @FindBy(id = "InputLastName")
     private WebElement inputLastName;
 
+    /**
+     * The form space for email address
+     */
     @FindBy(id = "InputEmail")
     private WebElement inputEmail;
 
+    /**
+     * The form space for the new password
+     */
     @FindBy(id = "password-new")
     private WebElement passwordNew;
 
+    /**
+     * The close button of the Sign Up modal
+     */
     @FindBy(id = "close")
     private WebElement closeButton;
 
+    /**
+     * The watch option icon.
+     */
     @FindBy(css = "#global-nav > ul > li.pillar.watch > a")
     private WebElement watchIcon;
 
+    /**
+     * The welcome message to login user
+     */
     @FindBy(css = ".display-user > span")
     private WebElement userNameConfirmation;
 
+    /**
+     * The welcome message to unregistered  user
+     */
     @FindBy(css = ".display-user")
     private WebElement displayUserName;
 
+    /**
+     * The LogOut option on the user menu.
+     */
     @FindBy(linkText="Log Out")
     private WebElement logOutText;
 
-    @FindBy(linkText="ESPN Profile")
-    private WebElement espnProfile;
 
-    @FindBy(css= "div#oneid-wrapper > iframe#oneid-iframe")
-    private WebElement UpdateAccountForm;
-
-    @FindBy(id="AccountDeleteLink")
-    private WebElement accountDeleteLink;
-
+    /** Waits for visibility and clicks on an element.
+     * @param element The selected element of the webpage.
+     */
     public void visibilityClickElement(WebElement element){
         super.waitForVisibility(element);
         super.clickElement(element);
     }
 
-    public void closeBanner(){
-        super.waitForFrameExistence(bannerIframe);
-        super.clickElement(bannerCloseBtn);
-    }
-
+    /** Access the user panel.
+     * @result The user panel is displayed.
+     */
     public void accessingUserPanel() {
         super.waitForVisibility(userIcon);
         super.clickElement(userIcon);
         super.waitForVisibility(menu);
     }
 
+    /** Searches the LogIn option on the user panel.
+     * @result Click done on the LogIn option.
+     */
     public void LogInOption() {
         accessingUserPanel();
         Assert.assertEquals(displayUsername(), "Welcome!",
@@ -149,27 +181,47 @@ public class HomePage extends BasePage {
         visibilityClickElement(logInText);
     }
 
+    /** Checks if the Log in modal is displayed.
+     * @return True if the Log in modal is displayed, otherwise the return is false.
+     */
     public boolean isLogInModalDisplayed(){
         super.waitForVisibility(logInModal);
         return logInModal.isDisplayed();
     }
 
+    /** Switches from home page to Log in modal.
+     * @result The Log in modal is displayed.
+     */
     public void switchToModal() {
         super.getDriver().switchTo().frame(logInModal);
     }
 
+    /** Checks if the ESPN logo is displayed.
+     * @return True if the ESPN logo is displayed, otherwise the return is false.
+     */
     public boolean isEspnLogoDisplayed() {
         super.waitForVisibility(espnLogo);
         return espnLogo.isDisplayed(); }
+
+    /** Checks if the Log in button is displayed.
+     * @return True if the ESPN logo is displayed, otherwise the return is false.
+     */
     public boolean isLogInButtonDisplayed() {
         super.waitForVisibility(submitButton);
         return submitButton.isDisplayed(); }
 
+    /** Checks if the Log in button is displayed.
+     * @return True if the ESPN logo is displayed, otherwise the return is false.
+     */
     public boolean isSignUpButtonDisplayed() {
         super.waitForVisibility(signUpButton);
         return signUpButton.isDisplayed();
     }
-    public boolean isCreateAccountTitleDisplayed() {
+
+    /** Checks if the create account title is displayed.
+     * @return True if the create account title is displayed, otherwise the return is false.
+     */
+        public boolean isCreateAccountTitleDisplayed() {
         super.waitForVisibility(createAccountTitle);
         return createAccountTitle.isDisplayed();
     }
@@ -254,7 +306,6 @@ public class HomePage extends BasePage {
         super.waitForVisibility(submitButton);
         super.waitForClickable(submitButton);
         //super.clickElement(submitButton);
-
     }
 
     public void logOutOption() {
@@ -300,13 +351,5 @@ public class HomePage extends BasePage {
         insertCredentials();
         switchToMain();
         super.waitForInvisibility(logInModal);
-    }
-
-
-    public void logInComplete() {
-        LogInOption();
-        switchToModal();
-        insideLogInModal();
-        switchToMain();
     }
 }
