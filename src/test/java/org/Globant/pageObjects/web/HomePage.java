@@ -6,7 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.passay.CharacterRule;
+import org.passay.EnglishCharacterData;
+import org.passay.PasswordGenerator;
 import org.testng.Assert;
+import com.github.javafaker.Faker;
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -16,6 +22,9 @@ import org.testng.Assert;
  * @version 1.0
  */
 public class HomePage extends BasePage {
+
+    private static final String FIRSTNAME = "Juan";
+    private static final String LASTNAME = "Gonzalez";
 
     /**
      * Constructor method for the HomePage class.
@@ -297,19 +306,14 @@ public class HomePage extends BasePage {
     public void signUpProcedure () {
         Reporter.info("Inserting valid information to Sign Up.");
 
-        String firstName = "Juan";
-        super.typeOnInput(inputFirstName, firstName);
+        super.typeOnInput(inputFirstName, FIRSTNAME);
+        super.typeOnInput(inputLastName, LASTNAME);
+        super.typeOnInput(inputEmail, generateRandomEmail());
+        super.typeOnInput(passwordNew, generateRandomPassword());
 
-        String lastName = "Gonzalez";
-        super.typeOnInput(inputLastName, lastName);
-
-        String email = "anahousat089@hotmail.com";
-        super.typeOnInput(inputEmail, email);
-
-        String newPassword = "8asuW-Mu21";
-        super.typeOnInput(passwordNew, newPassword);
         super.waitForVisibility(submitButton);
         super.waitForClickable(submitButton);
+        //completeAccessToElement(submitButton);
         //super.clickElement(submitButton);
     }
 
@@ -357,4 +361,25 @@ public class HomePage extends BasePage {
     }
 
     public void reloadPage() {super.getDriver().navigate().refresh(); }
+
+    public String generateRandomPassword() {
+
+        List rules = Arrays.asList(new CharacterRule(EnglishCharacterData.UpperCase, 1),
+                new CharacterRule(EnglishCharacterData.LowerCase, 1),
+                new CharacterRule(EnglishCharacterData.Digit, 1),
+                new CharacterRule(EnglishCharacterData.Special, 1));
+
+        PasswordGenerator generator = new PasswordGenerator();
+        String password = generator.generatePassword(10, rules);
+        return password;
+    }
+
+    public static String generateRandomEmail() {
+        Faker faker = new Faker();
+        return faker.internet().emailAddress();
+    }
+
+
+
+
 }

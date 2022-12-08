@@ -11,7 +11,6 @@ import static java.lang.String.format;
 public class WebHooks {
 
     private static UniqueWebDriver driver;
-
     private static final String URL ="https://www.espnqa.com/?src=com&_adblock=true&espn=cloud";
     private static final String BROWSER = "chrome";
 
