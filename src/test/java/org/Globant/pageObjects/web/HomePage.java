@@ -87,13 +87,13 @@ public class HomePage extends BasePage {
     private WebElement passwordValue;
 
     /**
-     * The Sign-up button
+     * The 'Sign up' button
      */
     @FindBy(id = "BtnCreateAccount")
     private WebElement signUpButton;
 
     /**
-     * The title of the Sign-Up modal
+     * The title of the 'Sign Up' modal
      */
     @FindBy(id = "Title")
     private WebElement createAccountTitle;
@@ -123,7 +123,7 @@ public class HomePage extends BasePage {
     private WebElement passwordNew;
 
     /**
-     * The close button of the Sign-Up modal
+     * The close button of the 'Sign Up' modal
      */
     @FindBy(id = "close")
     private WebElement closeButton;
@@ -352,4 +352,8 @@ public class HomePage extends BasePage {
         switchToMain();
         super.waitForInvisibility(logInModal);
     }
+
+
+
+
 }
