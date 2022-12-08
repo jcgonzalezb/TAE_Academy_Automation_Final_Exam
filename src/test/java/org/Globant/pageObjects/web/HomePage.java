@@ -161,7 +161,7 @@ public class HomePage extends BasePage {
     /** Checks visibility of a specific element and clicks on it.
      * @param element The selected element of the webpage.
      */
-    public void completeAccessElement(WebElement element){
+    public void completeAccessToElement(WebElement element){
         super.waitForVisibility(element);
         super.clickElement(element);
     }
@@ -180,7 +180,7 @@ public class HomePage extends BasePage {
      */
     public void LogInOption() {
         accessingUserPanel();
-        completeAccessElement(logInText);
+        completeAccessToElement(logInText);
     }
 
     /** Checks if the Log in modal is displayed.
@@ -255,7 +255,7 @@ public class HomePage extends BasePage {
 
 
     public void checkUserModal() {
-        Reporter.info("Validate 'User' modal information.");
+        Reporter.info("Validate User Modal information.");
         Assert.assertTrue(isEspnLogoDisplayed(),
                 "The ESPN logo is not present.");
         Reporter.info("The ESPN logo is present.");
@@ -329,7 +329,7 @@ public class HomePage extends BasePage {
     }
 
     public WatchPage watchPage() {
-        completeAccessElement(watchIcon);
+        completeAccessToElement(watchIcon);
         return new WatchPage(getDriver());
     }
 
