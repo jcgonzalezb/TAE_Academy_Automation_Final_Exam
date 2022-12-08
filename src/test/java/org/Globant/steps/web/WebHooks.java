@@ -3,7 +3,6 @@ package org.Globant.steps.web;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.Globant.configuration.web.UniqueWebDriver;
-import org.Globant.pageObjects.web.HomePage;
 import org.Globant.reporting.Reporter;
 import org.openqa.selenium.WebDriver;
 
@@ -22,15 +21,13 @@ public class WebHooks {
         Reporter.info("Deleting all the cookies");
         driver.getDriver().manage().deleteAllCookies();
         Reporter.info(format("Navigating to %s", URL));
-        Reporter.info("Navigating the ESPN Landing Page");
+        Reporter.info("Navigating to the ESPN Landing Page");
         driver.getDriver().get(URL);
         driver.getDriver().manage().window().maximize();
-        //home.closeBanner();
     }
 
     @After
     public void closeBrowser() { driver.getDriver().quit(); }
-
 
     public static WebDriver getDriver() {
         return driver.getDriver();

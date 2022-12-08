@@ -1,6 +1,7 @@
 package org.Globant.pageObjects.web;
 
 
+import org.Globant.reporting.Reporter;
 import org.Globant.utils.web.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,6 +64,7 @@ public class WatchPage extends BasePage {
     }
 
     public void returnToHome(){
+        Reporter.info("Navigating to the ESPN Landing Page.");
         super.getDriver().navigate().back();
     }
 }

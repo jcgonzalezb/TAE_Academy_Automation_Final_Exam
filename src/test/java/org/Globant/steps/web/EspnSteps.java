@@ -40,7 +40,7 @@ public class EspnSteps {
     @And("the user navigates to the Watch page")
     public void theUserNavigatesToTheWatchPage() {
         home.switchToMain();
-        Reporter.info("Navigating the ESPN Watch Page");
+        Reporter.info("Navigating to the ESPN Watch Page.");
         this.watchPage = home.watchPage();
         Assert.assertTrue(watchPage.isFirstCarouselDisplayed(),
                 "The first carousel is not present.");
@@ -51,7 +51,7 @@ public class EspnSteps {
         watchPage.clickOnSecondCard();
         Assert.assertTrue(watchPage.isxButtonDisplayed(),
                 "The 'X' button to close is not present.");
-        Reporter.info("The 'X' button to close is present.");
+        Reporter.info("The 'X' button to close the window is present.");
         watchPage.clickOnxButton();
         watchPage.returnToHome();
     }
@@ -59,10 +59,12 @@ public class EspnSteps {
     @And("the user returns to the ESPN landing page")
     public void theUserReturnsToTheESPNLandingPage() {
         home.switchToMain();
+        home.reloadPage();
+        Reporter.info("Validate welcome message with username on the user panel.");
         home.mouseHoverUserIcon();
         Assert.assertEquals(home.userNameConfirmation(),
-                USERNAME, "The username is not correct");
-        Reporter.info("The username is correct");
+                USERNAME, "The username is not correct.");
+        Reporter.info("The username is correct.");
     }
 
     @And("the user logs out")
@@ -74,10 +76,11 @@ public class EspnSteps {
     @Then("the user's name does not appeared in the welcome message")
     public void theUserSNameDoesNotAppearedInTheWelcomeMessage() {
         home.switchToMain();
+        home.reloadPage();
+        Reporter.info("Validate welcome message without username on the user panel.");
         home.mouseHoverUserIcon();
-        //home.LogInOptionConfirmation();
         Assert.assertEquals(home.displayUsername(), "Welcome!",
-                "The element 'Nav text' still has text: 'Welcome!' with user name.");
-        Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
+                "The element 'Nav text' still has text: 'Welcome!' with username.");
+        Reporter.info("The element 'Nav text' has text: 'Welcome!' without username.");
     }
 }

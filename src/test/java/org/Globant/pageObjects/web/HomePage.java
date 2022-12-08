@@ -152,6 +152,11 @@ public class HomePage extends BasePage {
     @FindBy(linkText="Log Out")
     private WebElement logOutText;
 
+    /**
+     * The Video Settings option on the user menu.
+     */
+    @FindBy(linkText="Video Settings")
+    private WebElement videoSettingsText;
 
     /** Checks visibility of a specific element and clicks on it.
      * @param element The selected element of the webpage.
@@ -175,9 +180,6 @@ public class HomePage extends BasePage {
      */
     public void LogInOption() {
         accessingUserPanel();
-        Assert.assertEquals(displayUsername(), "Welcome!",
-                "The element 'Nav text' still has text: 'Welcome!' with user name.");
-        Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
         completeAccessElement(logInText);
     }
 
@@ -253,6 +255,7 @@ public class HomePage extends BasePage {
 
 
     public void checkUserModal() {
+        Reporter.info("Validate 'User' modal information.");
         Assert.assertTrue(isEspnLogoDisplayed(),
                 "The ESPN logo is not present.");
         Reporter.info("The ESPN logo is present.");
@@ -267,6 +270,7 @@ public class HomePage extends BasePage {
     public void signUpModalValidate() {
         super.waitForClickable(signUpButton);
         super.clickElement(signUpButton);
+        Reporter.info("Validate 'Sign Up' modal information.");
         Assert.assertTrue(isCreateAccountTitleDisplayed(),
                 "The 'Create Account' title is not present.");
         Reporter.info("The 'Create Account' title is present.");
@@ -291,6 +295,7 @@ public class HomePage extends BasePage {
     }
 
     public void signUpProcedure () {
+        Reporter.info("Inserting valid information to Sign Up.");
 
         String firstName = "Juan";
         super.typeOnInput(inputFirstName, firstName);
@@ -313,7 +318,7 @@ public class HomePage extends BasePage {
         super.clickElement(logOutText);
     }
 
-    public void switchToMain() {super.getDriver().switchTo().defaultContent(); }
+    public void switchToMain() { super.getDriver().switchTo().defaultContent(); }
 
     public void insertCredentials () {
         String username = "juantesat1@hotmail.com";
@@ -333,9 +338,7 @@ public class HomePage extends BasePage {
         Actions action = new Actions(getDriver());
         action.moveToElement(userIcon).perform();
         super.clickElement(userIcon);
-        System.out.println("click on userIcon");
         super.waitForVisibility(menu);
-        System.out.println("Menu displayed");
     }
 
     public String userNameConfirmation ()    {
@@ -353,7 +356,5 @@ public class HomePage extends BasePage {
         super.waitForInvisibility(logInModal);
     }
 
-
-
-
+    public void reloadPage() {super.getDriver().navigate().refresh(); }
 }
