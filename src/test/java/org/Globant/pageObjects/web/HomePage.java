@@ -87,13 +87,13 @@ public class HomePage extends BasePage {
     private WebElement passwordValue;
 
     /**
-     * The Sign up button
+     * The Sign-up button
      */
     @FindBy(id = "BtnCreateAccount")
     private WebElement signUpButton;
 
     /**
-     * The title of the Sign Up modal
+     * The title of the Sign-Up modal
      */
     @FindBy(id = "Title")
     private WebElement createAccountTitle;
@@ -123,7 +123,7 @@ public class HomePage extends BasePage {
     private WebElement passwordNew;
 
     /**
-     * The close button of the Sign Up modal
+     * The close button of the Sign-Up modal
      */
     @FindBy(id = "close")
     private WebElement closeButton;
@@ -170,8 +170,8 @@ public class HomePage extends BasePage {
         super.waitForVisibility(menu);
     }
 
-    /** Searches the LogIn option on the user panel.
-     * @result Click done on the LogIn option.
+    /** Searches the 'Log in' option on the user panel.
+     * @result Click done on the 'Log in' option.
      */
     public void LogInOption() {
         accessingUserPanel();
@@ -203,14 +203,14 @@ public class HomePage extends BasePage {
         super.waitForVisibility(espnLogo);
         return espnLogo.isDisplayed(); }
 
-    /** Checks if the Log in button is displayed.
+    /** Checks if the "Log in" button is displayed.
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isLogInButtonDisplayed() {
         super.waitForVisibility(submitButton);
         return submitButton.isDisplayed(); }
 
-    /** Checks if the Log in button is displayed.
+    /** Checks if the 'Log in' button is displayed.
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isSignUpButtonDisplayed() {
