@@ -153,10 +153,10 @@ public class HomePage extends BasePage {
     private WebElement logOutText;
 
 
-    /** Waits for visibility and clicks on an element.
+    /** Checks visibility of a specific element and clicks on it.
      * @param element The selected element of the webpage.
      */
-    public void visibilityClickElement(WebElement element){
+    public void completeAccessElement(WebElement element){
         super.waitForVisibility(element);
         super.clickElement(element);
     }
@@ -178,7 +178,7 @@ public class HomePage extends BasePage {
         Assert.assertEquals(displayUsername(), "Welcome!",
                 "The element 'Nav text' still has text: 'Welcome!' with user name.");
         Reporter.info("The element 'Nav text' has text: 'Welcome!' without user name.");
-        visibilityClickElement(logInText);
+        completeAccessElement(logInText);
     }
 
     /** Checks if the Log in modal is displayed.
@@ -324,7 +324,7 @@ public class HomePage extends BasePage {
     }
 
     public WatchPage watchPage() {
-        visibilityClickElement(watchIcon);
+        completeAccessElement(watchIcon);
         return new WatchPage(getDriver());
     }
 
