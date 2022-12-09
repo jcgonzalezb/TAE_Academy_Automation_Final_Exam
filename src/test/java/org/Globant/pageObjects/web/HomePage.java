@@ -268,11 +268,11 @@ public class HomePage extends BasePage {
                 "The ESPN logo is not present.");
         Reporter.info("The ESPN logo is present.");
         Assert.assertTrue(isLogInButtonDisplayed(),
-                "The Log In button is not present.");
-        Reporter.info("The Log In button is present.");
+                "The 'Log In' button is not present.");
+        Reporter.info("The 'Log In' button is present.");
         Assert.assertTrue(isSignUpButtonDisplayed(),
-                "The Sign Up button is not present.");
-        Reporter.info("The Sign Up button is present.");
+                "The 'Sign Up' button is not present.");
+        Reporter.info("The 'Sign Up' button is present.");
     }
 
     public void signUpModalValidate() {
