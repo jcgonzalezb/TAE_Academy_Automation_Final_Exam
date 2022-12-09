@@ -95,8 +95,12 @@ For this project, several dependencies were installed, and to run both the web a
     Selenium.version 3.141.59
     Appium.version 7.2.0
 
-These are not the last versions are of the dependencies mentioned above and were installed because there is an incompatibility between those three dependencies when the last versions are used. Some problems found were the inability to work with Json files when the last versions of Selenium and Appium were used. Also, the last version of TestNg did not work properly with Appium version 7.2.0.      
-For more information about this issue you can check this link out: https://stackoverflow.com/questions/69742325/java-lang-noclassdeffounderror-org-openqa-selenium-remote-internal-jsontowebele
+These are not the last versions are of the dependencies mentioned above and were installed because there is an incompatibility between those three dependencies when the last versions are used. Some problems found were: 
+
+- The last version of TestNg did not work properly with Appium version 7.2.0.
+- Inability to work with Json files when the last versions of Selenium and Appium were used.
+
+For more information about the last issue, check this link out: https://stackoverflow.com/questions/69742325/java-lang-noclassdeffounderror-org-openqa-selenium-remote-internal-jsontowebele
 
 ## Installation
 
@@ -112,8 +116,10 @@ After this, the program is ready to run.
 
 Before running the program, make sure that the Android Studio is running a simulation of a device. This device must have installed Android 11.0. Also, make sure that the appium server is connected and working properly.
 
-1. Once the program is installed, find the suiteTest.xml file, make right-click on this file and select "Run suite.xml".
-2. The tests inside the suiteTest.xml will run and the results of the tests will be shown.
+1. Once the program is installed, find the suiteTest.xml file, make right-click on this file and select "Run suiteTest.xml".
+2. The program will run first the web module and then the mobile module.
+3. The tests inside the suiteTest.xml will run and the results of the tests will be shown.
+
 
 Here is an example of the test results for the mobile module.
 ```
