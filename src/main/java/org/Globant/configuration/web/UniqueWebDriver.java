@@ -12,8 +12,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * @version 1.0
  */
 public class UniqueWebDriver {
-    private WebDriver driver;
 
+    private WebDriver driver;
 
     /**
      * Constructor method for the UniqueWebDriver class.

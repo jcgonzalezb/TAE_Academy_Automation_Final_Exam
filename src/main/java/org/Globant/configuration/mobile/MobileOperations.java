@@ -20,6 +20,7 @@ import static org.openqa.selenium.support.PageFactory.initElements;
  * @version 1.0
  */
 public class MobileOperations {
+
     private final AndroidDriver<AndroidElement> driver;
     private final WebDriverWait wait;
 
@@ -49,7 +50,8 @@ public class MobileOperations {
      * @param swipes The swipes.
      */
     public void scrollDown(int swipes) {
-        String locator = "new UiScrollable(new UiSelector().resourceIdMatches(\".*ontainer.*\")).flingToEnd(1)";
+        String locator = "new UiScrollable(new UiSelector()." +
+                "resourceIdMatches(\".*ontainer.*\")).flingToEnd(1)";
         scroll(locator, swipes);
     }
 

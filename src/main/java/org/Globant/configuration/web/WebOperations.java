@@ -16,6 +16,7 @@ import static org.openqa.selenium.support.PageFactory.initElements;
  * @version 1.0
  */
 public abstract class WebOperations {
+
     private final WebDriver driver;
     private final WebDriverWait wait;
 
