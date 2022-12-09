@@ -23,7 +23,7 @@ public abstract class WebOperations {
      * Constructor method for the WebOperations class.
      *
      * @param driver : The driver that controls the behaviour
-     *      * of a web browser.
+     * of a web browser.
      */
     public WebOperations(WebDriver driver) {
         this.driver = driver;

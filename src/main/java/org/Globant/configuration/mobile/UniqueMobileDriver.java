@@ -5,12 +5,13 @@ import io.appium.java_client.android.AndroidElement;
 
 
 /**
- * Represents the Mobile driver used to control the Android application.
+ * Represents the Mobile driver used to control the behaviour of an Android application.
  *
  * @author juancamilo.gonzalez
  * @version 1.0
  */
 public class UniqueMobileDriver {
+
     private final AndroidDriver<AndroidElement> driver;
 
     /**
@@ -25,7 +26,7 @@ public class UniqueMobileDriver {
 
     /**
      * Returns the driver.
-     * @return The driver that controls the behaviour of an android application.
+     * @return An AndroidDriver element representing the driver for an Android application.
      */
     public AndroidDriver<AndroidElement> getDriver() {
         return this.driver;
