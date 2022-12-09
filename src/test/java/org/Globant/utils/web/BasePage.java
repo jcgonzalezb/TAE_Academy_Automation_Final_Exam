@@ -18,15 +18,4 @@ public class BasePage extends WebOperations {
     public BasePage(WebDriver driver) {
         super(driver);
     }
-
-    /**
-     * Refreshes the current page.
-     */
-    public void reloadPage() { super.getDriver().navigate().refresh(); }
-
-    /**
-     * Returns the user from other page on the ESPN site to the home page.
-     * @result The user is return to the ESPN home page.
-     */
-    public void switchToMain() { super.getDriver().switchTo().defaultContent(); }
 }

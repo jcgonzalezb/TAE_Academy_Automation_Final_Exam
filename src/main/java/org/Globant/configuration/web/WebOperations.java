@@ -66,4 +66,15 @@ public class WebOperations {
      */
     public void waitForClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element)); }
+
+    /**
+     * Refreshes the current page.
+     */
+    public void reloadPage() { getDriver().navigate().refresh(); }
+
+    /**
+     * Returns the user from other page on the ESPN site to the home page.
+     * @result The user is return to the ESPN home page.
+     */
+    public void switchToMain() { getDriver().switchTo().defaultContent(); }
 }
