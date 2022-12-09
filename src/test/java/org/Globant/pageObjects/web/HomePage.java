@@ -16,7 +16,7 @@ import java.util.List;
 
 
 /**
- * Represents the ESPN homepage.
+ * Represents the ESPN home page.
  *
  * @author juancamilo.gonzalez
  * @version 1.0
@@ -36,103 +36,97 @@ public class HomePage extends BasePage {
     }
 
     /**
-     * The principal frame from ESPN homepage.
+     * The principal frame from ESPN home page.
      */
     @FindBy(css= "body > div.promo-banner-container > iframe")
     private WebElement bannerIframe;
 
     /**
-     * A banner that appears when loading the ESPN homepage.
-     */
-    @FindBy(css="#fittPageContainer > section > div.PromoBanner__CloseBtn")
-    private WebElement bannerCloseBtn;
-
-    /**
-     * The icon to access the user options menu
+     * The 'User' icon used to access the user options menu.
      */
     @FindBy(id="global-user-trigger")
     private WebElement userIcon;
 
     /**
-     * The user options menu
+     * The user options menu.
      */
     @FindBy(className = "global-user-container")
     private WebElement menu;
 
     /**
-     * The 'Log in' option on the user options menu
+     * The 'Log in' option on the user options menu.
      */
     @FindBy(css= "div.global-user:last-child ul.account-management > li:last-child > a")
     private WebElement logInText;
 
     /**
-     * The modal to insert user information
+     * The modal to insert user information.
      */
     @FindBy(css = "div#oneid-wrapper > iframe#oneid-iframe")
     private WebElement logInModal;
 
     /**
-     * The ESPN logo
+     * The ESPN logo.
      */
     @FindBy(id ="logo")
     private WebElement espnLogo;
 
     /**
-     * The submit button
+     * The submit button.
      */
     @FindBy (id = "BtnSubmit")
     private WebElement submitButton;
 
     /**
-     * The 'Sign up' button
+     * The 'Sign up' button.
      */
     @FindBy(id = "BtnCreateAccount")
     private WebElement signUpButton;
 
     /**
-     * The title of the 'Sign Up' modal
+     * The title of the 'Sign Up' modal.
      */
     @FindBy(id = "Title")
     private WebElement createAccountTitle;
 
     /**
-     * The user's first name field
+     * The user's first name field.
      */
     @FindBy(id = "InputFirstName")
     private WebElement inputFirstName;
 
     /**
-     * The user's last name field
+     * The user's last name field.
      */
     @FindBy(id = "InputLastName")
     private WebElement inputLastName;
 
     /**
-     * The user's email address field
+     * The user's email address field.
      */
     @FindBy(id = "InputEmail")
     private WebElement inputEmail;
 
     /**
-     * The user's new password field
+     * The user's new password field.
      */
     @FindBy(id = "password-new")
     private WebElement passwordNew;
 
     /**
-     * The close button of the 'Sign Up' modal
+     * The close button of the 'Sign Up' modal.
      */
     @FindBy(id = "close")
     private WebElement closeButton;
 
     /**
-     * The watch option icon.
+     * The 'Watch' icon used to access the ESPN watch page.
      */
     @FindBy(css = "#global-nav > ul > li.pillar.watch > a")
     private WebElement watchIcon;
 
     /**
-     * The welcome message to login user
+     * The welcome message to login user.
      */
     @FindBy(css = ".display-user > span")
     private WebElement userNameConfirmation;
@@ -153,7 +147,7 @@ public class HomePage extends BasePage {
      * Checks visibility of a specific element and clicks on it.
      * @param element The selected element of the webpage.
      */
-    public void completeAccessToElement(WebElement element){
+    public void completeAccessToElement(WebElement element) {
         super.waitForVisibility(element);
         super.clickElement(element);
     }
@@ -187,7 +181,7 @@ public class HomePage extends BasePage {
     }
 
     /**
-     * Switches from homepage to 'Log in' modal.
+     * Switches from home page to 'Log in' modal.
      * @result The 'Log in' modal is displayed.
      */
     public void switchToModal() {
@@ -200,7 +194,8 @@ public class HomePage extends BasePage {
      */
     public boolean isEspnLogoDisplayed() {
         super.waitForVisibility(espnLogo);
-        return espnLogo.isDisplayed(); }
+        return espnLogo.isDisplayed();
+    }
 
     /**
      * Checks if the 'Sog in' button is displayed.
@@ -208,7 +203,8 @@ public class HomePage extends BasePage {
      */
     public boolean isLogInButtonDisplayed() {
         super.waitForVisibility(submitButton);
-        return submitButton.isDisplayed(); }
+        return submitButton.isDisplayed();
+    }
 
     /**
      * Checks if the 'Log in' button is displayed.
@@ -224,7 +220,7 @@ public class HomePage extends BasePage {
      * @return True if the 'Create Account' title is displayed,
      * otherwise the return is false.
      */
-        public boolean isCreateAccountTitleDisplayed() {
+    public boolean isCreateAccountTitleDisplayed() {
         super.waitForVisibility(createAccountTitle);
         return createAccountTitle.isDisplayed();
     }
@@ -259,7 +255,8 @@ public class HomePage extends BasePage {
         return inputEmail.isDisplayed();
     }
 
-    /** Checks if the user's new password field is displayed.
+    /**
+     * Checks if the user's new password field is displayed.
      * @return True if the user's new password field is displayed,
      * otherwise the return is false.
      */
@@ -268,7 +265,8 @@ public class HomePage extends BasePage {
         return passwordNew.isDisplayed();
     }
 
-    /** Checks if the close button of the 'Sign Up' modal is displayed.
+    /**
+     * Checks if the close button of the 'Sign Up' modal is displayed.
      * @return True if the close button of the 'Sign Up' modal is displayed,
      * otherwise the return is false.
      */
@@ -323,31 +321,47 @@ public class HomePage extends BasePage {
         Reporter.info("The 'X' close button is present.");
     }
 
+    /**
+     * Inserts valid information inside the 'Sign Up' Modal.
+     * @result The new user signed up.
+     */
     public void signUpProcedure () {
         Reporter.info("Inserting valid information to Sign Up.");
-
         super.typeOnInput(inputFirstName, FIRSTNAME);
         super.typeOnInput(inputLastName, LASTNAME);
         super.typeOnInput(inputEmail, generateRandomEmail());
         super.typeOnInput(passwordNew, generateRandomPassword());
-
-        super.waitForVisibility(submitButton);
-        super.waitForClickable(submitButton);
         completeAccessToElement(submitButton);
     }
 
+    /**
+     * Searches the 'Log out' option on the user panel.
+     * @result Click done on the 'Log out' option.
+     */
     public void logOutOption() {
         super.waitForVisibility(logOutText);
         super.clickElement(logOutText);
     }
 
+    /**
+     * Returns the user from other page on the ESPN site to the home page.
+     * @result The user is return to the ESPN home page.
+     */
     public void switchToMain() { super.getDriver().switchTo().defaultContent(); }
 
+    /**
+     * Takes the user to the ESPN watch page.
+     * @return The ESPN watch page is opened.
+     */
     public WatchPage watchPage() {
         completeAccessToElement(watchIcon);
         return new WatchPage(getDriver());
     }
 
+    /**
+     * Performs mouse hover the 'User' icon.
+     * @result The user option menu is displayed.
+     */
     public void mouseHoverUserIcon() {
         super.waitForVisibility(userIcon);
         Actions action = new Actions(getDriver());
@@ -356,35 +370,54 @@ public class HomePage extends BasePage {
         super.waitForVisibility(menu);
     }
 
-    public String userNameConfirmation ()    {
+    /**
+     * Gets the user's name from the welcome message on the user option panel.
+     * @return The user's name is obtained.
+     */
+    public String userNameConfirmation() {
         super.waitForVisibility(userNameConfirmation);
         return userNameConfirmation.getText();
     }
 
-    public String registeredUserName(){
-        String userName = FIRSTNAME + "!";
-        return userName;
+    /**
+     * Creates a string containing the user´s name plus an exclamation point.
+     * @return The user´s name plus an exclamation point.
+     */
+    public String registeredUserName() {
+        return FIRSTNAME + "!";
     }
 
-    public String displayUsername () {
+    /**
+     * Gets the user's name in the welcome message on the user option panel.
+     * @return The user's name is obtained.
+     */
+    public String displayUsername() {
         super.waitForVisibility(displayUserName);
         return displayUserName.getText();
     }
 
-    public void reloadPage() {super.getDriver().navigate().refresh(); }
+    /**
+     * Refreshes the current page.
+     */
+    public void reloadPage() { super.getDriver().navigate().refresh(); }
 
+    /**
+     * Generates a random password to sign up.
+     * @return A random password.
+     */
     public String generateRandomPassword() {
-
-        List rules = Arrays.asList(new CharacterRule(EnglishCharacterData.UpperCase, 1),
+        List<CharacterRule> rules = Arrays.asList(new CharacterRule(EnglishCharacterData.UpperCase, 1),
                 new CharacterRule(EnglishCharacterData.LowerCase, 1),
                 new CharacterRule(EnglishCharacterData.Digit, 1),
                 new CharacterRule(EnglishCharacterData.Special, 1));
-
         PasswordGenerator generator = new PasswordGenerator();
-        String password = generator.generatePassword(10, rules);
-        return password;
+        return generator.generatePassword(10, rules);
     }
 
+    /**
+     * Generates a random email address to sign up.
+     * @return A random email address.
+     */
     public String generateRandomEmail() {
         Faker faker = new Faker();
         return faker.internet().emailAddress();
