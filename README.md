@@ -120,6 +120,56 @@ Before running the program, make sure that the Android Studio is running a simul
 2. The program will run first the web module and then the mobile module.
 3. The tests inside the suiteTest.xml will run and the results of the tests will be shown.
 
+Here is an example of the test results for the mobile module.
+```
+ChromeDriver was started successfully.
+Dec 09, 2022 10:00:40 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Deleting all the cookies
+Navigating to https://www.espnqa.com/?src=com&_adblock=true&espn=cloud
+Navigating to the ESPN Landing Page
+The User Modal is present.
+Validate User Modal information.
+The ESPN logo is present.
+The 'Log In' button is present.
+The 'Sign Up' button is present.
+Validate 'Sign Up' modal information.
+The 'Create Account' title is present.
+The 'First Name' input is present.
+The 'Last Name' input is present.
+The 'Email' input is present.
+The 'Password' input is present.
+The 'Sign Up' button on the create account modal is present.
+The 'X' close button is present.
+Inserting valid information to Sign Up.
+Sign Up procedure completed!
+Navigating to the ESPN Watch Page.
+The first carousel is present.
+The second card on the first carousel is present.
+The 'X' button to close the window is present.
+Navigating to the ESPN Landing Page.
+Validate welcome message with username on the user panel.
+The username is correct.
+Log Out procedure completed!
+Validate welcome message without username on the user panel.
+The element 'Nav text' has text: 'Welcome!' without username.
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://cucumber.io/docs/cucumber/environment-variables/      │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+```
 
 Here is an example of the test results for the mobile module.
 ```

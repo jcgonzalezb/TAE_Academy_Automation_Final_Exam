@@ -9,9 +9,8 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>cucumber_project</name>
-  <description>A simple cucumber_project.</description>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <description>Program which allows basic tests on the ESPN web page and the Disneyland application for Android</description>
+  <url>https://www.espnqa.com/?src=com&amp;_adblock=true&amp;espn=cloud</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
