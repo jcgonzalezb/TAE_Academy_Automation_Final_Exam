@@ -120,7 +120,7 @@ Before running the program, make sure that the Android Studio is running a simul
 2. The program will run first the web module and then the mobile module.
 3. The tests inside the suiteTest.xml will run and the results of the tests will be shown.
 
-Here is an example of the test results for the mobile module.
+Here is an example of the test results for the web module.
 ```
 ChromeDriver was started successfully.
 Dec 09, 2022 10:00:40 AM org.openqa.selenium.remote.ProtocolHandshake createSession
