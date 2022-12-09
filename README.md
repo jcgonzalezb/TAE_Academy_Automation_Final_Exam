@@ -97,7 +97,7 @@ For this project, several dependencies were installed, and to run both the web a
 
 These are not the last versions are of the dependencies mentioned above and were installed because there is an incompatibility between those three dependencies when the last versions are used. Some problems found were: 
 
-- The last version of TestNg did not work properly with Appium version 7.2.0.
+- The last version of TestNG did not work properly with Appium version 7.2.0.
 - Inability to work with Json files when the last versions of Selenium and Appium were used.
 
 For more information about the last issue, check this link out: https://stackoverflow.com/questions/69742325/java-lang-noclassdeffounderror-org-openqa-selenium-remote-internal-jsontowebele
