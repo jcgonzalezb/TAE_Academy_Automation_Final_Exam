@@ -27,15 +27,6 @@ public class HomePage extends BasePage {
     private static final String LASTNAME = "Gonzalez";
 
     /**
-     * Constructor method for the HomePage class.
-     * @param driver The driver that controls the behaviour
-     * of a web browser.
-     */
-    public HomePage(WebDriver driver){
-        super(driver);
-    }
-
-    /**
      * The principal frame from ESPN home page.
      */
     @FindBy(css= "body > div.promo-banner-container > iframe")
@@ -142,6 +133,15 @@ public class HomePage extends BasePage {
      */
     @FindBy(linkText="Log Out")
     private WebElement logOutText;
+
+    /**
+     * Constructor method for the HomePage class.
+     * @param driver The driver that controls the behaviour
+     * of a web browser.
+     */
+    public HomePage(WebDriver driver){
+        super(driver);
+    }
 
     /**
      * Checks visibility of a specific element and clicks on it.

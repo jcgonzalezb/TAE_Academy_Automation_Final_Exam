@@ -1,11 +1,11 @@
 package org.Globant.pageObjects.web;
 
-
 import org.Globant.reporting.Reporter;
 import org.Globant.utils.web.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 
 /**
  * Represents the ESPN watch page.
@@ -14,15 +14,6 @@ import org.openqa.selenium.support.FindBy;
  * @version 1.0
  */
 public class WatchPage extends BasePage {
-
-    /**
-     * Constructor method for the WatchPage class.
-     * @param driver The driver that controls the behaviour
-     * of a web browser.
-     */
-    public WatchPage(WebDriver driver){
-        super(driver);
-    }
 
     /**
      * The first Carousel on the watch page.
@@ -41,6 +32,15 @@ public class WatchPage extends BasePage {
      */
     @FindBy(css=".lightbox__closebtn")
     private WebElement xButton;
+
+    /**
+     * Constructor method for the WatchPage class.
+     * @param driver The driver that controls the behaviour
+     * of a web browser.
+     */
+    public WatchPage(WebDriver driver){
+        super(driver);
+    }
 
     /**
      * Checks if the first carousel is displayed.
