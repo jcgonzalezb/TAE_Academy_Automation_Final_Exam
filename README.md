@@ -123,7 +123,7 @@ Before running the program, make sure that the Android Studio is running a simul
 Here is an example of the test results for the web module.
 ```
 ChromeDriver was started successfully.
-Dec 09, 2022 10:00:40 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Dec 09, 2022 10:08:46 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 Deleting all the cookies
 Navigating to https://www.espnqa.com/?src=com&_adblock=true&espn=cloud
@@ -169,6 +169,14 @@ The element 'Nav text' has text: 'Welcome!' without username.
 │ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
 │ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
 └───────────────────────────────────────────────────────────────────────────────────┘
+
+===============================================
+Default Suite
+Total tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+
+Process finished with exit code 0
 ```
 
 Here is an example of the test results for the mobile module.
