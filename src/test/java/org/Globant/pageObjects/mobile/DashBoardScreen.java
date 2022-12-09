@@ -8,38 +8,58 @@ import org.Globant.utils.mobile.BaseScreen;
 
 
 /**
- * DashBoard screen.
+ * Represents the 'Dashboard' Screen.
  *
- * @author Hans.Marquez
+ * @author juancamilo.gonzalez
+ * @version 1.0
  */
 public class DashBoardScreen extends BaseScreen {
 
     /**
+     * The 'Dismiss preference update' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/button2\")")
+    private AndroidElement dismissPreferenceUpdateButton;
+
+    /**
+     * The 'Close Takeover' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Close Takeover\")")
+    private AndroidElement dismissWelcome;
+
+    /**
+     * The 'Map' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Map, Tab, 2of5\")")
+    private AndroidElement mapButton;
+
+    /**
+     * The 'More options' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "descriptionContains(\"More Options, Tab, 5of5\")")
+    private AndroidElement moreOptionsButton;
+
+    /**
+     * The 'Buy Tickets Reserve Dining' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "descriptionContains(\"Buy tickets, Reserve Dining, Tab, 3of5\")")
+    private AndroidElement buyTicketsReserveDiningButton;
+
+    /**
      * Constructor method.
      *
-     * @param driver : AndroidDriver
-     * @author Hans.Marquez
+     * @param driver : The driver that controls the behaviour of an android application.
      */
     public DashBoardScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/button2\")")
-    private AndroidElement dismissPreferenceUpdateButton;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Close Takeover\")")
-    private AndroidElement dismissWelcome;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Map, Tab, 2of5\")")
-    private AndroidElement mapButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"More Options, Tab, 5of5\")")
-    private AndroidElement moreOptionsButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Buy tickets, Reserve Dining, Tab, 3of5\")")
-    private AndroidElement buyTicketsReserveDiningButton;
-
-
+    /**
+     * Dismisses the 'welcome' and the 'Preference Update' messages.
+     */
     public void dismissMessages() {
         if (this.isElementAvailable(dismissWelcome, 25L)){
             click(dismissWelcome);
@@ -50,8 +70,8 @@ public class DashBoardScreen extends BaseScreen {
     }
 
     /**
-     * @author Hans.Marquez
-     * Navigate to Map Screen from DashBoard Screen.
+     * Takes the user to the 'Map' Screen from the 'DashBoard' Screen.
+     * @return The 'Map' Screen is opened.
      */
     public MapScreen goToMapScreen() {
         dismissMessages();
@@ -61,15 +81,15 @@ public class DashBoardScreen extends BaseScreen {
     }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if Show More Options Button element is displayed on screen, otherwise false.
+     * Checks if the 'Show More Options' button is displayed.
+     * @return True if the 'Show More Options' button is displayed, otherwise the return is false.
      */
     public boolean moreOptionsButtonIsDisplayed() {
         return isElementAvailable(moreOptionsButton); }
 
     /**
-     * @author Juan.Gonzalez
-     * Navigate to More Options Screen from DashBoard Screen.
+     * Takes the user to the 'More Options' screen from the 'DashBoard' Screen.
+     * @return The 'More Options' Screen is opened.
      */
     public MoreOptionsScreen goToMoreOptionsScreen() {
         dismissMessages();
@@ -78,15 +98,17 @@ public class DashBoardScreen extends BaseScreen {
     }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if Buy Tickets Reserve Dining Button element is displayed on screen, otherwise false.
+     * Checks if the 'Buy Tickets Reserve Dining' button is displayed.
+     * @return True if the 'Buy Tickets Reserve Dining' button is displayed,
+     * otherwise the return is false.
      */
     public boolean buyTicketsReserveDiningButtonIsDisplayed() {
         return isElementAvailable(buyTicketsReserveDiningButton); }
 
     /**
-     * @author Juan.Gonzalez
-     * Navigate to Buy Tickets Reserve Dining Screen from DashBoard Screen.
+     * Takes the user to the 'Buy Tickets Reserve Dining' screen from
+     * the 'DashBoard' Screen.
+     * @return The 'Buy Tickets Reserve Dining' Screen is opened.
      */
     public BuyTicketsReserveDiningScreen goToBuyTicketsReserveDiningScreen() {
         dismissMessages();
