@@ -17,8 +17,7 @@ public class UniqueMobileDriver {
     /**
      * Constructor method for the UniqueMobileDriver class.
      *
-     * @param driver : The driver that controls the behaviour
-     * of an android application.
+     * @param driver : The driver that controls the behaviour of an android application.
      */
     public UniqueMobileDriver(AndroidDriver<AndroidElement> driver) {
         this.driver = driver;
