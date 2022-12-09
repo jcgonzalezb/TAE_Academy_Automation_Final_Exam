@@ -262,7 +262,6 @@ public class HomePage extends BasePage {
         return closeButton.isDisplayed();
     }
 
-
     public void checkUserModal() {
         Reporter.info("Validate User Modal information.");
         Assert.assertTrue(isEspnLogoDisplayed(),
@@ -314,7 +313,6 @@ public class HomePage extends BasePage {
         super.waitForVisibility(submitButton);
         super.waitForClickable(submitButton);
         completeAccessToElement(submitButton);
-        //super.clickElement(submitButton);
     }
 
     public void logOutOption() {
@@ -323,14 +321,6 @@ public class HomePage extends BasePage {
     }
 
     public void switchToMain() { super.getDriver().switchTo().defaultContent(); }
-
-    public void insertCredentials () {
-        String username = "juantesat1@hotmail.com";
-        super.typeOnInput(usernameValue, username);
-        String password = "8dmwQirn+cR02";
-        super.typeOnInput(passwordValue, password);
-        super.clickElement(submitButton);
-    }
 
     public WatchPage watchPage() {
         completeAccessToElement(watchIcon);
@@ -358,12 +348,6 @@ public class HomePage extends BasePage {
     public String displayUsername () {
         super.waitForVisibility(displayUserName);
         return displayUserName.getText();
-    }
-
-    public void insideLogInModal() {
-        insertCredentials();
-        switchToMain();
-        super.waitForInvisibility(logInModal);
     }
 
     public void reloadPage() {super.getDriver().navigate().refresh(); }

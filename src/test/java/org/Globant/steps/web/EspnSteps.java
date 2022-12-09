@@ -30,7 +30,6 @@ public class EspnSteps {
 
     @When("the user enters valid credentials for sign up")
     public void theUserEntersValidCredentialsForSignUp() {
-        //home.insideLogInModal();
         home.signUpModalValidate();
         home.signUpProcedure();
         Reporter.info("Sign Up procedure completed!");
