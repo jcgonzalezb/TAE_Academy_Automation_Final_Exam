@@ -344,12 +344,6 @@ public class HomePage extends BasePage {
     }
 
     /**
-     * Returns the user from other page on the ESPN site to the home page.
-     * @result The user is return to the ESPN home page.
-     */
-    public void switchToMain() { super.getDriver().switchTo().defaultContent(); }
-
-    /**
      * Takes the user to the ESPN watch page.
      * @return The ESPN watch page is opened.
      */
@@ -395,11 +389,6 @@ public class HomePage extends BasePage {
         super.waitForVisibility(displayUserName);
         return displayUserName.getText();
     }
-
-    /**
-     * Refreshes the current page.
-     */
-    public void reloadPage() { super.getDriver().navigate().refresh(); }
 
     /**
      * Generates a random password to sign up.
