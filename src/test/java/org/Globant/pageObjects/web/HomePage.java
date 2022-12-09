@@ -313,7 +313,7 @@ public class HomePage extends BasePage {
 
         super.waitForVisibility(submitButton);
         super.waitForClickable(submitButton);
-        //completeAccessToElement(submitButton);
+        completeAccessToElement(submitButton);
         //super.clickElement(submitButton);
     }
 

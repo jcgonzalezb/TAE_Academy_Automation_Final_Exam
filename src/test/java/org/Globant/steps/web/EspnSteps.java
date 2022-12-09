@@ -30,15 +30,14 @@ public class EspnSteps {
 
     @When("the user enters valid credentials for sign up")
     public void theUserEntersValidCredentialsForSignUp() {
-        home.insideLogInModal();
-        //home.signUpModalValidate();
-        //home.signUpProcedure();
+        //home.insideLogInModal();
+        home.signUpModalValidate();
+        home.signUpProcedure();
         Reporter.info("Sign Up procedure completed!");
     }
 
     @And("the user navigates to the Watch page")
     public void theUserNavigatesToTheWatchPage() {
-        home.switchToMain();
         Reporter.info("Navigating to the ESPN Watch Page.");
         this.watchPage = home.watchPage();
         Assert.assertTrue(watchPage.isFirstCarouselDisplayed(),
