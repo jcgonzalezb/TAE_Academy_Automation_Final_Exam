@@ -52,11 +52,11 @@ following scenarios.
 
 1. Category List Test
 
-|#  | Action                                               | Expected Result                            | Notes                                                                                 |
-|---|------------------------------------------------------|--------------------------------------------|---------------------------------------------------------------------------------------|
-| 1 | Tap Map Button available in Dashboard Page           | A Map view should be shown                 | Map Button Option is available in the bottom bar, the second item from left to right  |
-| 2 | Tap Category List                                    | Different categories are listed to select  | (Attractions isdefault option)                                                        |
-| 3 | Check if the Hotels Option is available in the list  | Hotels Option should be available          | Test user access. JSON Web Token (JWT) is required.                                   |   |
+|#  | Action                                               | Expected Result                            | Notes                                                                                |
+|---|------------------------------------------------------|--------------------------------------------|--------------------------------------------------------------------------------------|
+| 1 | Tap Map Button available in Dashboard Page           | A Map view should be shown                 | Map Button Option is available in the bottom bar, the second item from left to right |
+| 2 | Tap Category List                                    | Different categories are listed to select  | (Attractions is default option)                                                      |
+| 3 | Check if the Hotels Option is available in the list  | Hotels Option should be available          | N/A                                                                                  |   |
 
 2. Privacy & Legal
 
@@ -66,6 +66,13 @@ following scenarios.
 | 2   | Scroll down until bottom of the screen              | Different categories are listed to select:  <br> -My Profile <br> -Property Rules <br> -Link to Account <br> -Help <br> -Privacy & Legal | N/A                                                               |
 | 3   | Tap on Privacy & legal | Privacy & Legal screen is displayed                                                                                                      | N/A                                                               |
 | 4   | User can see a list of options | The screen have 6 option: <br> -Privacy Policy <br> -Terms of use <br> -Supplemental Terms and Conditions <br> -Legal Notices <br> -Property Rules <br> -Electronic <br> -Communication <br> -Disclosure     | N/A                |
+
+3. Privacy & Legal
+
+| #   | Action                                              | Expected Result                             | Notes                                                             |
+|-----|-----------------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|
+| 1   | Tap Add Plans Button available in Dashboard Page    | Add Plans Option List is shown to the user  | Add Plans Button Option is available in the bottom bar, the third item from left to right |
+| 2   | Check if the Reserve Dining Option is in the list            | Reserve Dining Option should be enabled     | N/A |
 
 
 ## Table of content
