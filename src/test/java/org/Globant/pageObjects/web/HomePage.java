@@ -48,7 +48,7 @@ public class HomePage extends BasePage {
     private WebElement bannerCloseBtn;
 
     /**
-     * The icon to access user information
+     * The icon to access the user options menu
      */
     @FindBy(id="global-user-trigger")
     private WebElement userIcon;
@@ -60,13 +60,13 @@ public class HomePage extends BasePage {
     private WebElement menu;
 
     /**
-     * The user options menu
+     * The 'Log in' option on the user options menu
      */
     @FindBy(css= "div.global-user:last-child ul.account-management > li:last-child > a")
     private WebElement logInText;
 
     /**
-     * The modal to insert user credentials
+     * The modal to insert user information
      */
     @FindBy(css = "div#oneid-wrapper > iframe#oneid-iframe")
     private WebElement logInModal;
@@ -84,18 +84,6 @@ public class HomePage extends BasePage {
     private WebElement submitButton;
 
     /**
-     * The form space for username
-     */
-    @FindBy(id = "InputLoginValue")
-    private WebElement usernameValue;
-
-    /**
-     * The form space for password
-     */
-    @FindBy(id = "InputPassword")
-    private WebElement passwordValue;
-
-    /**
      * The 'Sign up' button
      */
     @FindBy(id = "BtnCreateAccount")
@@ -108,25 +96,25 @@ public class HomePage extends BasePage {
     private WebElement createAccountTitle;
 
     /**
-     * The form space for first name
+     * The user's first name field
      */
     @FindBy(id = "InputFirstName")
     private WebElement inputFirstName;
 
     /**
-     * The form space for last name
+     * The user's last name field
      */
     @FindBy(id = "InputLastName")
     private WebElement inputLastName;
 
     /**
-     * The form space for email address
+     * The user's email address field
      */
     @FindBy(id = "InputEmail")
     private WebElement inputEmail;
 
     /**
-     * The form space for the new password
+     * The user's new password field
      */
     @FindBy(id = "password-new")
     private WebElement passwordNew;
@@ -150,24 +138,19 @@ public class HomePage extends BasePage {
     private WebElement userNameConfirmation;
 
     /**
-     * The welcome message to unregistered  user
+     * The welcome message to unregistered user
      */
     @FindBy(css = ".display-user")
     private WebElement displayUserName;
 
     /**
-     * The LogOut option on the user menu.
+     * The 'Log out' option on the user options menu
      */
     @FindBy(linkText="Log Out")
     private WebElement logOutText;
 
     /**
-     * The Video Settings option on the user menu.
-     */
-    @FindBy(linkText="Video Settings")
-    private WebElement videoSettingsText;
-
-    /** Checks visibility of a specific element and clicks on it.
+     * Checks visibility of a specific element and clicks on it.
      * @param element The selected element of the webpage.
      */
     public void completeAccessToElement(WebElement element){
@@ -175,7 +158,8 @@ public class HomePage extends BasePage {
         super.clickElement(element);
     }
 
-    /** Access the user panel.
+    /**
+     * Access the user panel.
      * @result The user panel is displayed.
      */
     public void accessingUserPanel() {
@@ -184,7 +168,8 @@ public class HomePage extends BasePage {
         super.waitForVisibility(menu);
     }
 
-    /** Searches the 'Log in' option on the user panel.
+    /**
+     * Searches the 'Log in' option on the user panel.
      * @result Click done on the 'Log in' option.
      */
     public void LogInOption() {
@@ -192,36 +177,41 @@ public class HomePage extends BasePage {
         completeAccessToElement(logInText);
     }
 
-    /** Checks if the Log in modal is displayed.
-     * @return True if the Log in modal is displayed, otherwise the return is false.
+    /**
+     * Checks if the 'Log in' modal is displayed.
+     * @return True if the 'Log in' modal is displayed, otherwise the return is false.
      */
     public boolean isLogInModalDisplayed(){
         super.waitForVisibility(logInModal);
         return logInModal.isDisplayed();
     }
 
-    /** Switches from home page to Log in modal.
-     * @result The Log in modal is displayed.
+    /**
+     * Switches from homepage to 'Log in' modal.
+     * @result The 'Log in' modal is displayed.
      */
     public void switchToModal() {
         super.getDriver().switchTo().frame(logInModal);
     }
 
-    /** Checks if the ESPN logo is displayed.
+    /**
+     * Checks if the ESPN logo is displayed.
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isEspnLogoDisplayed() {
         super.waitForVisibility(espnLogo);
         return espnLogo.isDisplayed(); }
 
-    /** Checks if the "Log in" button is displayed.
+    /**
+     * Checks if the 'Sog in' button is displayed.
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isLogInButtonDisplayed() {
         super.waitForVisibility(submitButton);
         return submitButton.isDisplayed(); }
 
-    /** Checks if the 'Log in' button is displayed.
+    /**
+     * Checks if the 'Log in' button is displayed.
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isSignUpButtonDisplayed() {
@@ -229,39 +219,67 @@ public class HomePage extends BasePage {
         return signUpButton.isDisplayed();
     }
 
-    /** Checks if the create account title is displayed.
-     * @return True if the create account title is displayed, otherwise the return is false.
+    /**
+     * Checks if the 'Create Account' title is displayed.
+     * @return True if the 'Create Account' title is displayed,
+     * otherwise the return is false.
      */
         public boolean isCreateAccountTitleDisplayed() {
         super.waitForVisibility(createAccountTitle);
         return createAccountTitle.isDisplayed();
     }
 
+    /**
+     * Checks if the user's first name field is displayed.
+     * @return True if the user's first name field is displayed,
+     * otherwise the return is false.
+     */
     public boolean isInputFirstNameDisplayed() {
         super.waitForVisibility(inputFirstName);
         return inputFirstName.isDisplayed();
     }
 
+    /**
+     * Checks if the user's last name field is displayed.
+     * @return True if the user's last name field is displayed,
+     * otherwise the return is false.
+     */
     public boolean isInputLastNameDisplayed() {
         super.waitForVisibility(inputLastName);
         return inputLastName.isDisplayed();
     }
 
+    /**
+     * Checks if the user's email address field is displayed.
+     * @return True if the user's email address field is displayed,
+     * otherwise the return is false.
+     */
     public boolean isInputEmailDisplayed() {
         super.waitForVisibility(inputEmail);
         return inputEmail.isDisplayed();
     }
 
+    /** Checks if the user's new password field is displayed.
+     * @return True if the user's new password field is displayed,
+     * otherwise the return is false.
+     */
     public boolean isPasswordNewDisplayed() {
         super.waitForVisibility(passwordNew);
         return passwordNew.isDisplayed();
     }
 
+    /** Checks if the close button of the 'Sign Up' modal is displayed.
+     * @return True if the close button of the 'Sign Up' modal is displayed,
+     * otherwise the return is false.
+     */
     public boolean isCloseButtonDisplayed() {
         super.waitForVisibility(closeButton);
         return closeButton.isDisplayed();
     }
 
+    /**
+     * Validates several elements inside the User Modal.
+     */
     public void checkUserModal() {
         Reporter.info("Validate User Modal information.");
         Assert.assertTrue(isEspnLogoDisplayed(),
@@ -275,6 +293,9 @@ public class HomePage extends BasePage {
         Reporter.info("The 'Sign Up' button is present.");
     }
 
+    /**
+     * Validates several elements inside the 'Sign Up' Modal.
+     */
     public void signUpModalValidate() {
         super.waitForClickable(signUpButton);
         super.clickElement(signUpButton);
