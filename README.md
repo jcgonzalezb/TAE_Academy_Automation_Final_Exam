@@ -89,6 +89,15 @@ following scenarios.
 ##  Environment
 This project was developed on IntelliJ IDEA 2022.2.3 (Community Edition), JDK 11.0.16.1 and Maven 3.8.6.
 
+For this project, several dependencies were installed, and to run both the web and the mobile modules sequentially using one suiteTest.xml, the following dependencies were installed using specific versions: 
+
+    Testng.version 6.14.3
+    Selenium.version 3.141.59
+    Appium.version 7.2.0
+
+These are not the last versions are of the dependencies mentioned above and were installed because there is an incompatibility between those three dependencies when the last versions are used. Some problems found were the inability to work with Json files when the last versions of Selenium and Appium were used. Also, the last version of TestNg did not work properly with Appium version 7.2.0.      
+For more information about this issue you can check this link out: https://stackoverflow.com/questions/69742325/java-lang-noclassdeffounderror-org-openqa-selenium-remote-internal-jsontowebele
+
 ## Installation
 
 1. Clone this repository
@@ -100,6 +109,8 @@ Open IntelliJ -> Select Git -> Select Clone... -> Select URL and enter "https://
 After this, the program is ready to run.
 
 ## Usage
+
+Before running the program, make sure that the Android Studio is running a simulation of a device. This device must have installed Android 11.0. Also, make sure that the appium server is connected and working properly.
 
 1. Once the program is installed, find the suiteTest.xml file, make right-click on this file and select "Run suite.xml".
 2. The tests inside the suiteTest.xml will run and the results of the tests will be shown.
