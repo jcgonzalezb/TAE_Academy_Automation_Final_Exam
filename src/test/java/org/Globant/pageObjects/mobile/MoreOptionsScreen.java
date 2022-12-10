@@ -8,105 +8,145 @@ import org.Globant.utils.mobile.BaseScreen;
 import org.testng.Assert;
 
 
-
+/**
+ * Represents the 'More Options' Screen.
+ *
+ * @author juancamilo.gonzalez
+ * @version 1.0
+ */
 public class MoreOptionsScreen extends BaseScreen {
 
+    /**
+     * The 'My Profile' button.
+     */
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"My Profile button\")")
     private AndroidElement myProfileButton;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Property Rules button\")")
+    /**
+     * The 'Property Rules' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "descriptionContains(\"Property Rules button\")")
     private AndroidElement propertyRulesButton;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Cast Compliment button\")")
+    /**
+     * The 'Cast Compliment' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "descriptionContains(\"Cast Compliment button\")")
     private AndroidElement castComplimentButton;
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Link to Account button\")")
+    /**
+     * The 'Link to Account' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "descriptionContains(\"Link to Account button\")")
     private AndroidElement linkToAccountButton;
 
+    /**
+     * The 'Car Locator' button.
+     */
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Car Locator button\")")
     private AndroidElement carLocatorButton;
 
+    /**
+     * The 'Help' button.
+     */
     @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Help button\")")
     private AndroidElement helpButton;
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Privacy & Legal button\")")
+
+    /**
+     * The 'Privacy Legal' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "descriptionContains(\"Privacy & Legal button\")")
     private AndroidElement privacyLegalButton;
 
     /**
-     * Constructor method.
+     * Constructor method for the MoreOptionsScreen class.
      *
-     * @param driver the driver
-     * @author Juan.Gonzalez
+     * @param driver : The driver that controls the behaviour of an android application.
      */
     public MoreOptionsScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);
     }
 
     /**
-     * @author Juan.Gonzalez
-     * Scroll down until the Privacy & Legal button is located.
+     * Scrolls down until the 'Privacy & Legal' button is located.
      */
     public void scrollDownToPrivacyLegal(){
         scrollDown(4);
     }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if 'My Profile' Button is displayed on screen, otherwise false.
+     * Checks if the 'My Profile' button is displayed.
+     * @return True if the 'My Profile' button is displayed, otherwise the return is false.
      */
     public boolean myProfileButtonIsDisplayed() {
         return isElementAvailable(myProfileButton);
     }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if 'Property Rules' Button is displayed on screen, otherwise false.
+     * Checks if the 'Property Rules' button is displayed.
+     * @return True if the 'Property Rules' button is displayed, otherwise the return is false.
      */
     public boolean propertyRulesButtonIsDisplayed() {
         return isElementAvailable(propertyRulesButton);
     }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if 'Cast Compliment' Button is displayed on screen, otherwise false.
+     * Checks if the 'Cast Compliment' button is displayed.
+     * @return True if the 'Cast Compliment' button is displayed, otherwise the return is false.
      */
-    public boolean castComplimentButtonIsDisplayed() { return isElementAvailable(castComplimentButton); }
+    public boolean castComplimentButtonIsDisplayed() {
+        return isElementAvailable(castComplimentButton);
+    }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if 'Link to Account' Button is displayed on screen, otherwise false.
+     * Checks if the 'Link to Account' button is displayed.
+     * @return True if the 'Link to Account' button is displayed, otherwise the return is false.
      */
-    public boolean linkToAccountButtonIsDisplayed() { return isElementAvailable(linkToAccountButton); }
+    public boolean linkToAccountButtonIsDisplayed() {
+        return isElementAvailable(linkToAccountButton);
+    }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if 'Car Locator' Button is displayed on screen, otherwise false.
+     * Checks if the 'Car Locator' button is displayed.
+     * @return True if the 'Car Locator' button is displayed, otherwise the return is false.
      */
-    public boolean carLocatorButtonIsDisplayed() { return isElementAvailable(carLocatorButton); }
+    public boolean carLocatorButtonIsDisplayed() {
+        return isElementAvailable(carLocatorButton);
+    }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if 'Help' Button is displayed on screen, otherwise false.
+     * Checks if the 'Help' button is displayed.
+     * @return True if the 'Help' button is displayed, otherwise the return is false.
      */
-    public boolean helpButtonIsDisplayed() { return isElementAvailable(helpButton); }
+    public boolean helpButtonIsDisplayed() {
+        return isElementAvailable(helpButton);
+    }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if 'Privacy & Legal' Button is displayed on screen, otherwise false.
+     * Checks if the 'Privacy & Legal' button is displayed.
+     * @return True if the 'Privacy & Legal' button is displayed, otherwise the return is false.
      */
     public boolean privacyLegalButtonIsDisplayed() {
         return isElementAvailable(privacyLegalButton);
     }
 
     /**
-     * @author Juan.Gonzalez
-     * Navigate to Privacy & Legal Screen from More Options Screen.
+     * Takes the user to the 'Privacy & Legal' screen from the 'More Options' Screen.
+     * @return The 'Privacy & Legal' Screen is opened.
      */
     public PrivacyLegalScreen goToPrivacyLegalScreen() {
         click(privacyLegalButton);
         return new PrivacyLegalScreen(getDriver());
     }
 
-    public void moreOtherOptionsScreenAssertions(){
+    /**
+     * Validates all the options available on the 'More Options' Screen.
+     */
+    public void moreOptionsScreenAssertions() {
 
         Reporter.info("Validate 'My Profile' option");
         Assert.assertTrue(myProfileButtonIsDisplayed(), "'My Profile' option not displayed");

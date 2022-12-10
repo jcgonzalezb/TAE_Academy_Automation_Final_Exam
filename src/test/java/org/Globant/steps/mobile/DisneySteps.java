@@ -72,7 +72,7 @@ public class DisneySteps {
         this.moreOtherOptions = dashBoard.goToMoreOptionsScreen();
         Reporter.info("Scroll down until bottom of the screen.");
         moreOtherOptions.scrollDownToPrivacyLegal();
-        moreOtherOptions.moreOtherOptionsScreenAssertions();
+        moreOtherOptions.moreOptionsScreenAssertions();
     }
 
     @And("taps on the Privacy & Legal option")
