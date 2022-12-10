@@ -7,46 +7,56 @@ import org.Globant.utils.mobile.BaseScreen;
 
 
 /**
- * Object of the first screen that appears when we open the application.
+ * Represents the 'Tutorial' Screen.
  *
- * @author Arley.Bolivar
+ * @author juancamilo.gonzalez
+ * @version 1.0
  */
-
 public class TutorialScreen extends BaseScreen {
 
     /**
-     * Constructor method.
+     * The 'Get Started' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Get Started\")")
+    private AndroidElement getStartedButton;
+
+    /**
+     * The 'Share Location' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Share Location\")")
+    private AndroidElement shareLocationButton;
+
+    /**
+     * The 'Allow Location' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*android:id/button1\")")
+    private AndroidElement allowLocationButton;
+
+    /**
+     * The 'Allow' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*only_button\")")
+    private AndroidElement allowButton;
+
+    /**
+     * Constructor method for the TutorialScreen class.
      *
-     * @param driver the driver
-     * @author Arley.Bolivar
+     * @param driver : The driver that controls the behaviour of an android application.
      */
     public TutorialScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Get Started\")")
-    private AndroidElement getStartedButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Share Location\")")
-    private AndroidElement shareLocationButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*android:id/button1\")")
-    private AndroidElement allowLocationButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*only_button\")")
-    private AndroidElement allowButton;
-
     /**
-     * @author Hans.Marquez
-     * Start permissions process.
+     * Clicks on the 'Get Started' button.
      */
     public void startPermissionsProcess() {
         click(getStartedButton);
     }
 
     /**
-     * @author Hans.Marquez
-     * Share Location permissions process.
+     * Takes the user to the 'Dashboard' Screen from the 'Tutorial' Screen.
+     * @return The 'Dashboard' Screen is opened.
      */
     public DashBoardScreen shareLocationPermissions() {
         click(shareLocationButton);
