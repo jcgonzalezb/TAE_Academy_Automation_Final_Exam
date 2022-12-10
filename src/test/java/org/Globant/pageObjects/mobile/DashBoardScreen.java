@@ -61,16 +61,17 @@ public class DashBoardScreen extends BaseScreen {
      * Dismisses the 'welcome' and the 'Preference Update' messages.
      */
     public void dismissMessages() {
-        if (this.isElementAvailable(dismissWelcome, 25L)){
+        if (this.isElementAvailable(dismissWelcome, 25L)) {
             click(dismissWelcome);
         }
-        if (this.isElementAvailable(dismissPreferenceUpdateButton, 10L)){
+        if (this.isElementAvailable(dismissPreferenceUpdateButton, 10L)) {
             click(dismissPreferenceUpdateButton);
         }
     }
 
     /**
      * Takes the user to the 'Map' Screen from the 'DashBoard' Screen.
+     *
      * @return The 'Map' Screen is opened.
      */
     public MapScreen goToMapScreen() {
@@ -82,13 +83,16 @@ public class DashBoardScreen extends BaseScreen {
 
     /**
      * Checks if the 'Show More Options' button is displayed.
+     *
      * @return True if the 'Show More Options' button is displayed, otherwise the return is false.
      */
     public boolean moreOptionsButtonIsDisplayed() {
-        return isElementAvailable(moreOptionsButton); }
+        return isElementAvailable(moreOptionsButton);
+    }
 
     /**
      * Takes the user to the 'More Options' screen from the 'DashBoard' Screen.
+     *
      * @return The 'More Options' Screen is opened.
      */
     public MoreOptionsScreen goToMoreOptionsScreen() {
@@ -99,15 +103,18 @@ public class DashBoardScreen extends BaseScreen {
 
     /**
      * Checks if the 'Buy Tickets Reserve Dining' button is displayed.
+     *
      * @return True if the 'Buy Tickets Reserve Dining' button is displayed,
      * otherwise the return is false.
      */
     public boolean buyTicketsReserveDiningButtonIsDisplayed() {
-        return isElementAvailable(buyTicketsReserveDiningButton); }
+        return isElementAvailable(buyTicketsReserveDiningButton);
+    }
 
     /**
      * Takes the user to the 'Buy Tickets Reserve Dining' screen from
      * the 'DashBoard' Screen.
+     *
      * @return The 'Buy Tickets Reserve Dining' Screen is opened.
      */
     public BuyTicketsReserveDiningScreen goToBuyTicketsReserveDiningScreen() {

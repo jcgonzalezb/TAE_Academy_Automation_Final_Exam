@@ -39,6 +39,7 @@ public class BuyTicketsReserveDiningScreen extends BaseScreen {
 
     /**
      * Checks if the 'Buy Tickets Reserve Dining' list is displayed.
+     *
      * @return True if the 'Buy Tickets Reserve Dining' list is displayed,
      * otherwise the return is false.
      */
@@ -48,6 +49,7 @@ public class BuyTicketsReserveDiningScreen extends BaseScreen {
 
     /**
      * Checks if the 'Check Dining Availability' button is displayed.
+     *
      * @return True if the 'Check Dining Availability' button is displayed,
      * otherwise the return is false.
      */

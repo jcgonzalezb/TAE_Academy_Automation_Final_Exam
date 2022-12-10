@@ -1,5 +1,6 @@
 package org.Globant.pageObjects.web;
 
+import com.github.javafaker.Faker;
 import org.Globant.reporting.Reporter;
 import org.Globant.utils.web.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.PasswordGenerator;
 import org.testng.Assert;
-import com.github.javafaker.Faker;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,13 +30,13 @@ public class HomePage extends BasePage {
     /**
      * The principal frame from ESPN home page.
      */
-    @FindBy(css= "body > div.promo-banner-container > iframe")
+    @FindBy(css = "body > div.promo-banner-container > iframe")
     private WebElement bannerIframe;
 
     /**
      * The 'User' icon used to access the user options menu.
      */
-    @FindBy(id="global-user-trigger")
+    @FindBy(id = "global-user-trigger")
     private WebElement userIcon;
 
     /**
@@ -47,7 +48,7 @@ public class HomePage extends BasePage {
     /**
      * The 'Log in' option on the user options menu.
      */
-    @FindBy(css= "div.global-user:last-child ul.account-management > li:last-child > a")
+    @FindBy(css = "div.global-user:last-child ul.account-management > li:last-child > a")
     private WebElement logInText;
 
     /**
@@ -59,13 +60,13 @@ public class HomePage extends BasePage {
     /**
      * The ESPN logo.
      */
-    @FindBy(id ="logo")
+    @FindBy(id = "logo")
     private WebElement espnLogo;
 
     /**
      * The submit button.
      */
-    @FindBy (id = "BtnSubmit")
+    @FindBy(id = "BtnSubmit")
     private WebElement submitButton;
 
     /**
@@ -131,20 +132,22 @@ public class HomePage extends BasePage {
     /**
      * The 'Log out' option on the user options menu
      */
-    @FindBy(linkText="Log Out")
+    @FindBy(linkText = "Log Out")
     private WebElement logOutText;
 
     /**
      * Constructor method for the HomePage class.
+     *
      * @param driver The driver that controls the behaviour
-     * of a web browser.
+     *               of a web browser.
      */
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         super(driver);
     }
 
     /**
      * Checks visibility of a specific element and clicks on it.
+     *
      * @param element The selected element of the webpage.
      */
     public void completeAccessToElement(WebElement element) {
@@ -154,6 +157,7 @@ public class HomePage extends BasePage {
 
     /**
      * Access the user panel.
+     *
      * @result The user panel is displayed.
      */
     public void accessingUserPanel() {
@@ -164,6 +168,7 @@ public class HomePage extends BasePage {
 
     /**
      * Searches the 'Log in' option on the user panel.
+     *
      * @result Click done on the 'Log in' option.
      */
     public void LogInOption() {
@@ -173,15 +178,17 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the 'Log in' modal is displayed.
+     *
      * @return True if the 'Log in' modal is displayed, otherwise the return is false.
      */
-    public boolean isLogInModalDisplayed(){
+    public boolean isLogInModalDisplayed() {
         super.waitForVisibility(logInModal);
         return logInModal.isDisplayed();
     }
 
     /**
      * Switches from home page to 'Log in' modal.
+     *
      * @result The 'Log in' modal is displayed.
      */
     public void switchToModal() {
@@ -190,6 +197,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the ESPN logo is displayed.
+     *
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isEspnLogoDisplayed() {
@@ -199,6 +207,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the 'Sog in' button is displayed.
+     *
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isLogInButtonDisplayed() {
@@ -208,6 +217,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the 'Log in' button is displayed.
+     *
      * @return True if the ESPN logo is displayed, otherwise the return is false.
      */
     public boolean isSignUpButtonDisplayed() {
@@ -217,6 +227,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the 'Create Account' title is displayed.
+     *
      * @return True if the 'Create Account' title is displayed,
      * otherwise the return is false.
      */
@@ -227,6 +238,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the user's first name field is displayed.
+     *
      * @return True if the user's first name field is displayed,
      * otherwise the return is false.
      */
@@ -237,6 +249,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the user's last name field is displayed.
+     *
      * @return True if the user's last name field is displayed,
      * otherwise the return is false.
      */
@@ -247,6 +260,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the user's email address field is displayed.
+     *
      * @return True if the user's email address field is displayed,
      * otherwise the return is false.
      */
@@ -257,6 +271,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the user's new password field is displayed.
+     *
      * @return True if the user's new password field is displayed,
      * otherwise the return is false.
      */
@@ -267,6 +282,7 @@ public class HomePage extends BasePage {
 
     /**
      * Checks if the close button of the 'Sign Up' modal is displayed.
+     *
      * @return True if the close button of the 'Sign Up' modal is displayed,
      * otherwise the return is false.
      */
@@ -323,9 +339,10 @@ public class HomePage extends BasePage {
 
     /**
      * Inserts valid information inside the 'Sign Up' Modal.
+     *
      * @result The new user signed up.
      */
-    public void signUpProcedure () {
+    public void signUpProcedure() {
         Reporter.info("Inserting valid information to Sign Up.");
         super.typeOnInput(inputFirstName, FIRSTNAME);
         super.typeOnInput(inputLastName, LASTNAME);
@@ -336,6 +353,7 @@ public class HomePage extends BasePage {
 
     /**
      * Searches the 'Log out' option on the user panel.
+     *
      * @result Click done on the 'Log out' option.
      */
     public void logOutOption() {
@@ -345,6 +363,7 @@ public class HomePage extends BasePage {
 
     /**
      * Takes the user to the ESPN watch page.
+     *
      * @return The ESPN watch page is opened.
      */
     public WatchPage watchPage() {
@@ -354,6 +373,7 @@ public class HomePage extends BasePage {
 
     /**
      * Performs mouse hover the 'User' icon.
+     *
      * @result The user option menu is displayed.
      */
     public void mouseHoverUserIcon() {
@@ -366,6 +386,7 @@ public class HomePage extends BasePage {
 
     /**
      * Gets the user's name from the welcome message on the user option panel.
+     *
      * @return The user's name is obtained.
      */
     public String userNameConfirmation() {
@@ -375,6 +396,7 @@ public class HomePage extends BasePage {
 
     /**
      * Creates a string containing the user´s name plus an exclamation point.
+     *
      * @return The user´s name plus an exclamation point.
      */
     public String registeredUserName() {
@@ -383,6 +405,7 @@ public class HomePage extends BasePage {
 
     /**
      * Gets the user's name in the welcome message on the user option panel.
+     *
      * @return The user's name is obtained.
      */
     public String displayUsername() {
@@ -392,6 +415,7 @@ public class HomePage extends BasePage {
 
     /**
      * Generates a random password to sign up.
+     *
      * @return A random password.
      */
     public String generateRandomPassword() {
@@ -405,6 +429,7 @@ public class HomePage extends BasePage {
 
     /**
      * Generates a random email address to sign up.
+     *
      * @return A random email address.
      */
     public String generateRandomEmail() {

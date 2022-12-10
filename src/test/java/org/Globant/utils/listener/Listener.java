@@ -15,6 +15,7 @@ public abstract class Listener implements ITestListener {
 
     /**
      * Shows the name of the test and the text [PASSED] when a test is successful.
+     *
      * @param result The result of a test.
      */
     @Override
@@ -24,6 +25,7 @@ public abstract class Listener implements ITestListener {
 
     /**
      * Shows the name of the test and the text [FAILED] when a test is unsuccessful.
+     *
      * @param result The result of a test.
      */
     @Override

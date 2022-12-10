@@ -74,12 +74,13 @@ public class MoreOptionsScreen extends BaseScreen {
     /**
      * Scrolls down until the 'Privacy & Legal' button is located.
      */
-    public void scrollDownToPrivacyLegal(){
+    public void scrollDownToPrivacyLegal() {
         scrollDown(4);
     }
 
     /**
      * Checks if the 'My Profile' button is displayed.
+     *
      * @return True if the 'My Profile' button is displayed, otherwise the return is false.
      */
     public boolean myProfileButtonIsDisplayed() {
@@ -88,6 +89,7 @@ public class MoreOptionsScreen extends BaseScreen {
 
     /**
      * Checks if the 'Property Rules' button is displayed.
+     *
      * @return True if the 'Property Rules' button is displayed, otherwise the return is false.
      */
     public boolean propertyRulesButtonIsDisplayed() {
@@ -96,6 +98,7 @@ public class MoreOptionsScreen extends BaseScreen {
 
     /**
      * Checks if the 'Cast Compliment' button is displayed.
+     *
      * @return True if the 'Cast Compliment' button is displayed, otherwise the return is false.
      */
     public boolean castComplimentButtonIsDisplayed() {
@@ -104,6 +107,7 @@ public class MoreOptionsScreen extends BaseScreen {
 
     /**
      * Checks if the 'Link to Account' button is displayed.
+     *
      * @return True if the 'Link to Account' button is displayed, otherwise the return is false.
      */
     public boolean linkToAccountButtonIsDisplayed() {
@@ -112,6 +116,7 @@ public class MoreOptionsScreen extends BaseScreen {
 
     /**
      * Checks if the 'Car Locator' button is displayed.
+     *
      * @return True if the 'Car Locator' button is displayed, otherwise the return is false.
      */
     public boolean carLocatorButtonIsDisplayed() {
@@ -120,6 +125,7 @@ public class MoreOptionsScreen extends BaseScreen {
 
     /**
      * Checks if the 'Help' button is displayed.
+     *
      * @return True if the 'Help' button is displayed, otherwise the return is false.
      */
     public boolean helpButtonIsDisplayed() {
@@ -128,6 +134,7 @@ public class MoreOptionsScreen extends BaseScreen {
 
     /**
      * Checks if the 'Privacy & Legal' button is displayed.
+     *
      * @return True if the 'Privacy & Legal' button is displayed, otherwise the return is false.
      */
     public boolean privacyLegalButtonIsDisplayed() {
@@ -136,6 +143,7 @@ public class MoreOptionsScreen extends BaseScreen {
 
     /**
      * Takes the user to the 'Privacy & Legal' screen from the 'More Options' Screen.
+     *
      * @return The 'Privacy & Legal' Screen is opened.
      */
     public PrivacyLegalScreen goToPrivacyLegalScreen() {

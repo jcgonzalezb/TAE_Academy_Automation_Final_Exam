@@ -3,7 +3,6 @@ package org.Globant.configuration.mobile;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,7 +27,7 @@ public class MobileOperations {
      * Constructor method for the MobileOperations class.
      *
      * @param driver : The driver that controls the behaviour
-     * of an android application.
+     *               of an android application.
      */
     public MobileOperations(AndroidDriver<AndroidElement> driver) {
         this.driver = driver;
@@ -39,6 +38,7 @@ public class MobileOperations {
 
     /**
      * Gets the driver for an Android application.
+     *
      * @return An Android element representing the driver for an Android application.
      */
     public AndroidDriver<AndroidElement> getDriver() {
@@ -47,6 +47,7 @@ public class MobileOperations {
 
     /**
      * Scrolls down the screen (From Top to Bottom).
+     *
      * @param swipes The swipes.
      */
     public void scrollDown(int swipes) {
@@ -57,6 +58,7 @@ public class MobileOperations {
 
     /**
      * Scrolls the screen.
+     *
      * @param locator The locator.
      * @param swipes  The swipes.
      */
@@ -74,6 +76,7 @@ public class MobileOperations {
 
     /**
      * Wrapper for click event.
+     *
      * @param element : An Android element.
      */
     public void click(AndroidElement element) {
@@ -84,6 +87,7 @@ public class MobileOperations {
 
     /**
      * Wrapper for Visibility event using a default timeout.
+     *
      * @param element : An Android element.
      * @return True if the Android element is available, otherwise the return is false.
      */
@@ -99,6 +103,7 @@ public class MobileOperations {
 
     /**
      * Wrapper for Visibility event using a custom timeout.
+     *
      * @param element : An Android element.
      * @param timeout : Timeout for visibility.
      * @return True if the Android element is available, otherwise the return is false.

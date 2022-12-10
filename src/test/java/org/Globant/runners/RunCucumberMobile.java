@@ -15,4 +15,5 @@ import io.cucumber.testng.CucumberOptions;
  * @author juancamilo.gonzalez
  * @version 1.0
  */
-public class RunCucumberMobile extends AbstractTestNGCucumberTests { }
+public class RunCucumberMobile extends AbstractTestNGCucumberTests {
+}

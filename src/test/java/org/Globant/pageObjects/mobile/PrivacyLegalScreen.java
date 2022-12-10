@@ -99,6 +99,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Privacy & Legal' options list is displayed.
+     *
      * @return True if the 'Privacy & Legal' options list is displayed,
      * otherwise the return is false.
      */
@@ -108,6 +109,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Privacy Policy' option is displayed.
+     *
      * @return True if the 'Privacy Policy' option is displayed,
      * otherwise the return is false.
      */
@@ -117,6 +119,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Terms of Use' option is displayed.
+     *
      * @return True if the 'Terms of Use' option is displayed, otherwise the return is false.
      */
     public boolean termsOfUseOptionIsDisplayed() {
@@ -125,6 +128,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Supplemental Terms and Conditions' option is displayed.
+     *
      * @return True if the 'Supplemental Terms and Conditions' option is displayed,
      * otherwise the return is false.
      */
@@ -134,6 +138,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Legal Notices' option is displayed.
+     *
      * @return True if the 'Legal Notices' option is displayed, otherwise the return is false.
      */
     public boolean legalNoticesOptionIsDisplayed() {
@@ -142,6 +147,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Property Rules' option is displayed.
+     *
      * @return True if the 'Property Rules' option is displayed, otherwise the return is false.
      */
     public boolean propertyRulesOptionIsDisplayed() {
@@ -150,6 +156,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Electronic Communications Disclosure' option is displayed.
+     *
      * @return True if the 'Electronic Communications Disclosure' option is displayed,
      * otherwise the return is false.
      */
@@ -159,6 +166,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Your California Privacy Rights' option is displayed.
+     *
      * @return True if the 'Your California Privacy Rights' option is displayed,
      * otherwise the return is false.
      */
@@ -168,6 +176,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'Do Not Sell My Personal Information' option is displayed.
+     *
      * @return True if the 'Do Not Sell My Personal Information' option is displayed,
      * otherwise the return is false.
      */
@@ -177,6 +186,7 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'In-App Maps Subject to Google Terms and Conditions' option is displayed.
+     *
      * @return True if the 'In-App Maps Subject to Google Terms and Conditions' option
      * is displayed, otherwise the return is false.
      */
@@ -186,15 +196,18 @@ public class PrivacyLegalScreen extends BaseScreen {
 
     /**
      * Checks if the 'In-App Maps Subject to Google Privacy Policy' option is displayed.
+     *
      * @return True if the 'In-App Maps Subject to Google Privacy Policy' option
      * is displayed, otherwise the return is false.
      */
-    public boolean googlePrivacyPolicyIsDisplayed() { return isElementAvailable(googlePrivacyPolicyButton); }
+    public boolean googlePrivacyPolicyIsDisplayed() {
+        return isElementAvailable(googlePrivacyPolicyButton);
+    }
 
     /**
      * Validates all the options available on the 'Privacy & Legal' Screen.
      */
-    public void privacyLegalScreenAssertions(){
+    public void privacyLegalScreenAssertions() {
 
         Reporter.info("Validate 'Privacy & Legal' option list");
         Assert.assertTrue(listOfLegalOptionsIsDisplayed(), "'Privacy & Legal' option list not displayed");

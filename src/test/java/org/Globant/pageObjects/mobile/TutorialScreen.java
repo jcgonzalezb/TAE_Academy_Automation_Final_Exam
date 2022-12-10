@@ -56,6 +56,7 @@ public class TutorialScreen extends BaseScreen {
 
     /**
      * Takes the user to the 'Dashboard' Screen from the 'Tutorial' Screen.
+     *
      * @return The 'Dashboard' Screen is opened.
      */
     public DashBoardScreen shareLocationPermissions() {

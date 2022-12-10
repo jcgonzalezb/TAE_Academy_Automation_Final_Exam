@@ -65,6 +65,7 @@ public class MapScreen extends BaseScreen {
 
     /**
      * Checks if the 'Category List' button is displayed.
+     *
      * @return True if the 'Category List' button is displayed, otherwise the return is false.
      */
     public boolean categoryButtonIsDisplayed() {
@@ -73,6 +74,7 @@ public class MapScreen extends BaseScreen {
 
     /**
      * Checks if the 'Filter' button is displayed.
+     *
      * @return True if the 'Category List' button is displayed, otherwise the return is false.
      */
     public boolean filterIsDisplayed() {
@@ -81,6 +83,7 @@ public class MapScreen extends BaseScreen {
 
     /**
      * Checks if the 'Show List' button is displayed.
+     *
      * @return True if the 'Show List' button is displayed, otherwise the return is false.
      */
     public boolean showListIsDisplayed() {
@@ -98,6 +101,7 @@ public class MapScreen extends BaseScreen {
 
     /**
      * Checks if the 'Disneyland' map is displayed.
+     *
      * @return True if the 'Disneyland' map is displayed, otherwise the return is false.
      */
     public boolean disneylandMapIsDisplayed() {
@@ -106,6 +110,7 @@ public class MapScreen extends BaseScreen {
 
     /**
      * Checks if the 'Select Category' title is displayed.
+     *
      * @return True if the 'Select Category' title is displayed,
      * otherwise the return is false.
      */
@@ -115,6 +120,7 @@ public class MapScreen extends BaseScreen {
 
     /**
      * Checks if the 'Hotels' category button is displayed.
+     *
      * @return True if the 'Hotels' category button is displayed, otherwise the return is false.
      */
     public boolean hotelsCategoryButtonIsDisplayed() {

@@ -25,6 +25,7 @@ public class UniqueMobileDriver {
 
     /**
      * Returns the driver.
+     *
      * @return An AndroidDriver element representing the driver for an Android application.
      */
     public AndroidDriver<AndroidElement> getDriver() {

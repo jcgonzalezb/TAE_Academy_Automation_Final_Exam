@@ -27,7 +27,7 @@ public class MobileHooks {
      * Organizes the SetUp before running the suite of test.
      */
     @Before
-    public void startApp(){
+    public void startApp() {
         Reporter.info("Navigating to the Tutorial Screen.");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ConfigCapabilities.deviceSetUp(capabilities);
@@ -52,6 +52,7 @@ public class MobileHooks {
 
     /**
      * Returns the driver.
+     *
      * @return An AndroidDriver element representing the driver for an Android application.
      */
     public static AndroidDriver<AndroidElement> getDriver() {

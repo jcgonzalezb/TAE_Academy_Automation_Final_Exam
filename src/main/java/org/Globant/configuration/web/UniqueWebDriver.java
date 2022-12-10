@@ -23,7 +23,7 @@ public class UniqueWebDriver {
      * @result The browser selected will be used for testing procedures.
      */
     public UniqueWebDriver(String browser) {
-        switch (browser.toLowerCase()){
+        switch (browser.toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
@@ -37,6 +37,7 @@ public class UniqueWebDriver {
 
     /**
      * Returns the driver.
+     *
      * @return An WebDriver element representing the driver for web browser.
      */
     public WebDriver getDriver() {

@@ -17,7 +17,7 @@ public class BaseScreen extends MobileOperations {
      * Constructor method for standard screens object.
      *
      * @param driver : The driver that controls the behaviour
-     * of an android application.
+     *               of an android application.
      */
     public BaseScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);

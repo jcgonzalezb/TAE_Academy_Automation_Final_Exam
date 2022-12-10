@@ -15,15 +15,19 @@ public class Reporter {
     /**
      * Constructor method for the Reporter class.
      */
-    public Reporter() {}
+    public Reporter() {
+    }
 
     /**
      * Method used to find or create a logger.
      */
-    private static Logger getLogger() { return LoggerFactory.getLogger(Reporter.class);}
+    private static Logger getLogger() {
+        return LoggerFactory.getLogger(Reporter.class);
+    }
 
     /**
      * Shows a message to the user.
+     *
      * @param text The text used to show a message to the user.
      */
     public static void info(String text) {
@@ -32,6 +36,7 @@ public class Reporter {
 
     /**
      * Shows an error message to the user.
+     *
      * @param text The text used to show an error message to the user.
      * @return false when an error is found during the execution of a program.
      */

@@ -1,7 +1,5 @@
 package org.Globant.steps.mobile;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -99,7 +97,7 @@ public class DisneySteps {
     }
 
     /**
-     Takes the user to the 'Privacy & Legal' Screen from the 'DashBoard' Screen.
+     * Takes the user to the 'Privacy & Legal' Screen from the 'DashBoard' Screen.
      */
     @And("taps on the Privacy & Legal option")
     public void tapsOnThePrivacyLegalOption() {
@@ -108,7 +106,7 @@ public class DisneySteps {
     }
 
     /**
-     Validates all the options available on the 'Privacy & Legal' Screen.
+     * Validates all the options available on the 'Privacy & Legal' Screen.
      */
     @Then("all Privacy & Legal options are displayed")
     public void allPrivacyLegalOptionsAreDisplayed() {
@@ -141,7 +139,7 @@ public class DisneySteps {
     }
 
     /**
-     Validates 'Check Dining Availability' button is available.
+     * Validates 'Check Dining Availability' button is available.
      */
     @Then("the Check Dining Availability button is displayed")
     public void theCheckDiningAvailabilityButtonIsDisplayed() {

@@ -22,7 +22,7 @@ public abstract class WebOperations {
      * Constructor method for the WebOperations class.
      *
      * @param driver : The driver that controls the behaviour
-     * of a web browser.
+     *               of a web browser.
      */
     public WebOperations(WebDriver driver) {
         this.driver = driver;
@@ -32,6 +32,7 @@ public abstract class WebOperations {
 
     /**
      * Gets the driver for a web browser.
+     *
      * @return An WebDriver element representing the driver for a web browser.
      */
     protected WebDriver getDriver() {
@@ -40,6 +41,7 @@ public abstract class WebOperations {
 
     /**
      * Wrapper for click event.
+     *
      * @param element : An WebElement element.
      */
     public void clickElement(WebElement element) {
@@ -49,32 +51,45 @@ public abstract class WebOperations {
 
     /**
      * Assigns a value as string to a WebElement.
+     *
      * @param element : An WebElement.
-     * @param text : Value as string to a WebElement.
+     * @param text    : Value as string to a WebElement.
      */
-    public void typeOnInput(WebElement element, String text) {element.sendKeys(text);}
+    public void typeOnInput(WebElement element, String text) {
+        element.sendKeys(text);
+    }
 
     /**
      * Wrapper for Visibility event using a default timeout.
+     *
      * @param element : A WebElement element.
      */
-    public void waitForVisibility(WebElement element) { wait.until(ExpectedConditions.visibilityOf(element));}
+    public void waitForVisibility(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
 
     /**
      * Wrapper for click on an element event using a default timeout.
+     *
      * @param element : A WebElement element.
      */
     public void waitForClickable(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element)); }
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
 
     /**
      * Refreshes the current page.
      */
-    public void reloadPage() { getDriver().navigate().refresh(); }
+    public void reloadPage() {
+        getDriver().navigate().refresh();
+    }
 
     /**
      * Returns the user from other page on the ESPN site to the home page.
+     *
      * @result The user is return to the ESPN home page.
      */
-    public void switchToMain() { getDriver().switchTo().defaultContent(); }
+    public void switchToMain() {
+        getDriver().switchTo().defaultContent();
+    }
 }

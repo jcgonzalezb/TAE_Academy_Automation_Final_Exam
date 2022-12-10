@@ -13,8 +13,9 @@ public class BasePage extends WebOperations {
 
     /**
      * Constructor method for the BasePage class.
+     *
      * @param driver The driver that controls the behaviour
-     * of a web browser.
+     *               of a web browser.
      */
     public BasePage(WebDriver driver) {
         super(driver);

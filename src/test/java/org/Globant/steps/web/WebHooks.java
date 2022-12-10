@@ -18,7 +18,7 @@ import static java.lang.String.format;
 public class WebHooks {
 
     private static UniqueWebDriver driver;
-    private static final String URL ="https://www.espnqa.com/?src=com&_adblock=true&espn=cloud";
+    private static final String URL = "https://www.espnqa.com/?src=com&_adblock=true&espn=cloud";
     private static final String BROWSER = "chrome";
 
     /**
@@ -39,10 +39,13 @@ public class WebHooks {
      * Closes the web browser after completing the test.
      */
     @After
-    public void closeBrowser() { driver.getDriver().quit(); }
+    public void closeBrowser() {
+        driver.getDriver().quit();
+    }
 
     /**
      * Returns the driver.
+     *
      * @return An WebDriver element representing the driver for web browser.
      */
     public static WebDriver getDriver() {
