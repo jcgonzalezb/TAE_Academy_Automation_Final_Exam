@@ -13,14 +13,18 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * Represents the Hooks used for the DisneySteps class.
+ *
+ * @author juancamilo.gonzalez
+ * @version 1.0
+ */
 public class MobileHooks {
 
     public static UniqueMobileDriver driver;
 
     /**
-     * SetUp before to run suite of test.
-     *
-     * @author Arley.Bolivar
+     * Organizes the SetUp before running the suite of test.
      */
     @Before
     public void startApp(){
@@ -29,7 +33,8 @@ public class MobileHooks {
         ConfigCapabilities.deviceSetUp(capabilities);
         ConfigCapabilities.applicationSetUp(capabilities);
         try {
-            driver = new UniqueMobileDriver(new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities));
+            driver = new UniqueMobileDriver(new AndroidDriver<>(
+                    new URL("http://127.0.0.1:4723/wd/hub"), capabilities));
         } catch (MalformedURLException exception) {
             exception.printStackTrace();
         }
@@ -37,9 +42,7 @@ public class MobileHooks {
     }
 
     /**
-     * Close the application after completing the test.
-     *
-     * @author Arley.Bolivar
+     * Closes the application after completing the test.
      */
     @After
     public void closeApp() {
@@ -48,13 +51,10 @@ public class MobileHooks {
     }
 
     /**
-     * return the driver.
-     *
-     * @return driver
-     * @author Arley.Bolivar
+     * Returns the driver.
+     * @return An AndroidDriver element representing the driver for an Android application.
      */
     public static AndroidDriver<AndroidElement> getDriver() {
         return driver.getDriver();
     }
-
 }
