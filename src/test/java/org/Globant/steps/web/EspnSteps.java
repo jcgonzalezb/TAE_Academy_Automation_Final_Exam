@@ -12,11 +12,21 @@ import org.testng.Assert;
 
 import static org.Globant.steps.web.WebHooks.getDriver;
 
+
+/**
+ * Represents the tests cases used in the ESPN landing page.
+ *
+ * @author juancamilo.gonzalez
+ * @version 1.0
+ */
 public class EspnSteps {
 
     private HomePage home;
     private WatchPage watchPage;
 
+    /**
+     * Takes the user to the ESPN landing page.
+     */
     @Given("the user navigates the ESPN landing page")
     public void theUserNavigatesTheESPNLandingPage() {
         this.home = new HomePage(getDriver());
@@ -28,6 +38,9 @@ public class EspnSteps {
         home.checkUserModal();
     }
 
+    /**
+     * The user enters valid credentials for sign up.
+     */
     @When("the user enters valid credentials for sign up")
     public void theUserEntersValidCredentialsForSignUp() {
         home.signUpModalValidate();
@@ -35,6 +48,9 @@ public class EspnSteps {
         Reporter.info("Sign Up procedure completed!");
     }
 
+    /**
+     * Takes the user to the ESPN watch page.
+     */
     @And("the user navigates to the Watch page")
     public void theUserNavigatesToTheWatchPage() {
         Reporter.info("Navigating to the ESPN Watch Page.");
@@ -53,6 +69,9 @@ public class EspnSteps {
         watchPage.returnToHome();
     }
 
+    /**
+     * Takes the user back to the ESPN landing page.
+     */
     @And("the user returns to the ESPN landing page")
     public void theUserReturnsToTheESPNLandingPage() {
         home.switchToMain();
@@ -64,12 +83,18 @@ public class EspnSteps {
         Reporter.info("The username is correct.");
     }
 
+    /**
+     * The user Logs out properly.
+     */
     @And("the user logs out")
     public void theUserLogsOut() {
         home.logOutOption();
         Reporter.info("Log Out procedure completed!");
     }
 
+    /**
+     * Validates that the user logged out successfully.
+     */
     @Then("the user's name does not appeared in the welcome message")
     public void theUserSNameDoesNotAppearedInTheWelcomeMessage() {
         home.switchToMain();
