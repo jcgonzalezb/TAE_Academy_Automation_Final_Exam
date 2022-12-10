@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TAE Academy Automation Final Exam" verbose="1">
+
+    <test name="ESPN test">
+        <classes>
+            <class name="org.Globant.runners.RunCucumberWeb"></class>
+        </classes>
+    </test>
+    <test name="Disneyland tests">
+        <classes>
+            <class name="org.Globant.runners.RunCucumberMobile"></class>
+        </classes>
+    </test>
+</suite>
