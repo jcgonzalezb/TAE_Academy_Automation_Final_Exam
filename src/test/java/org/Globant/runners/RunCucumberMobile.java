@@ -9,6 +9,10 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@mobileTesting"
 )
 
-public class RunCucumberMobile extends AbstractTestNGCucumberTests {
-
-}
+/**
+ * Represents the runner used to make the mobile module tests.
+ *
+ * @author juancamilo.gonzalez
+ * @version 1.0
+ */
+public class RunCucumberMobile extends AbstractTestNGCucumberTests { }

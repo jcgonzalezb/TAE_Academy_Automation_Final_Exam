@@ -9,6 +9,10 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@webTesting"
 )
 
-public class RunCucumberWeb extends AbstractTestNGCucumberTests {
-
-}
+/**
+ * Represents the runner used to make the web module test.
+ *
+ * @author juancamilo.gonzalez
+ * @version 1.0
+ */
+public class RunCucumberWeb extends AbstractTestNGCucumberTests { }
