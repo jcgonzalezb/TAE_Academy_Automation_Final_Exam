@@ -48,7 +48,7 @@ public class DashBoardScreen extends BaseScreen {
     private AndroidElement buyTicketsReserveDiningButton;
 
     /**
-     * Constructor method.
+     * Constructor method for the DashBoardScreen class.
      *
      * @param driver : The driver that controls the behaviour of an android application.
      */

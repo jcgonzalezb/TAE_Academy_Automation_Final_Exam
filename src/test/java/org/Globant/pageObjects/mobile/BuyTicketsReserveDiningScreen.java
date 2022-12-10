@@ -29,7 +29,7 @@ public class BuyTicketsReserveDiningScreen extends BaseScreen {
     private AndroidElement checkDiningAvailabilityButton;
 
     /**
-     * Constructor method.
+     * Constructor method for the BuyTicketsReserveDiningScreen class.
      *
      * @param driver : The driver that controls the behaviour of an android application.
      */

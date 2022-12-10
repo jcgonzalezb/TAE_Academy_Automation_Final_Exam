@@ -7,67 +7,88 @@ import org.Globant.utils.mobile.BaseScreen;
 
 
 /**
- * Map screen.
+ * Represents the 'Map' Screen.
  *
- * @author Hans.Marquez
+ * @author juancamilo.gonzalez
+ * @version 1.0
  */
 public class MapScreen extends BaseScreen {
 
     /**
-     * Constructor method.
+     * The 'Category list' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*categoryTitle\")")
+    private AndroidElement categoryListButton;
+
+    /**
+     * The 'Category Select' header.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "resourceId(\"com.disney.wdpro.dlr:id/categorySelectHeader\")")
+    private AndroidElement categorySelectHeader;
+
+    /**
+     * The 'Filter' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*filterTitle.*\")")
+    private AndroidElement filterButton;
+
+    /**
+     * The 'Show List' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*toggleTitle.*\")")
+    private AndroidElement showListButton;
+
+    /**
+     * The 'Hotels Category' button.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "descriptionContains(\"Hotels, Category, 10of11, button\")")
+    private AndroidElement hotelsCategoryButton;
+
+    /**
+     * The 'Disneyland' map.
+     */
+    @AndroidFindBy(uiAutomator = "new UiSelector()." +
+            "resourceId(\"com.disney.wdpro.dlr:id/map_view_fragment\")")
+    private AndroidElement disneylandMapOnScreen;
+
+    /**
+     * Constructor method for the MapScreen class.
      *
-     * @param driver the driver
-     * @author Hans.Marquez
+     * @param driver : The driver that controls the behaviour of an android application.
      */
     public MapScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*categoryTitle\")")
-    private AndroidElement categoryListButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/categorySelectHeader\")")
-    private AndroidElement categorySelectHeader;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*filterTitle.*\")")
-    private AndroidElement filterButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceIdMatches(\".*toggleTitle.*\")")
-    private AndroidElement showListButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionContains(\"Hotels, Category, 10of11, button\")")
-    private AndroidElement hotelsCategoryButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/map_view_fragment\")")
-    private AndroidElement disneylandMapOnScreen;
 
     /**
-     * @author Hans.Marquez
-     * return true if Category List element is displayed in screen, otherwise false.
+     * Checks if the 'Category List' button is displayed.
+     * @return True if the 'Category List' button is displayed, otherwise the return is false.
      */
     public boolean categoryButtonIsDisplayed() {
         return isElementAvailable(categoryListButton);
     }
 
     /**
-     * @author Hans.Marquez
-     * return true if Filter Button element is displayed in screen, otherwise false.
+     * Checks if the 'Filter' button is displayed.
+     * @return True if the 'Category List' button is displayed, otherwise the return is false.
      */
     public boolean filterIsDisplayed() {
         return isElementAvailable(filterButton);
     }
 
     /**
-     * @author Hans.Marquez
-     * return true if Show List Button element is displayed in screen, otherwise false.
+     * Checks if the 'Show List' button is displayed.
+     * @return True if the 'Show List' button is displayed, otherwise the return is false.
      */
     public boolean showListIsDisplayed() {
         return isElementAvailable(showListButton);
     }
 
     /**
-     * @author Juan.Gonzalez
-     * Click on the Category List button if it is available.
+     * Clicks on the 'Category List' button.
      */
     public void clickOnCategoryList() {
         if (this.isElementAvailable(categoryListButton, 25)) {
@@ -76,24 +97,25 @@ public class MapScreen extends BaseScreen {
     }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if Disneyland map is displayed on screen, otherwise false.
+     * Checks if the 'Disneyland' map is displayed.
+     * @return True if the 'Disneyland' map is displayed, otherwise the return is false.
      */
     public boolean disneylandMapIsDisplayed() {
         return isElementAvailable(disneylandMapOnScreen);
     }
 
     /**
-     * @author Hans.Marquez
-     * return true if Show Select Category title is displayed in screen, otherwise false.
+     * Checks if the 'Select Category' title is displayed.
+     * @return True if the 'Select Category' title is displayed,
+     * otherwise the return is false.
      */
     public boolean selectCategoryTitleIsDisplayed() {
         return isElementAvailable(categorySelectHeader);
     }
 
     /**
-     * @author Juan.Gonzalez
-     * return true if Show Hotels Category Button element is displayed on screen, otherwise false.
+     * Checks if the 'Hotels' category button is displayed.
+     * @return True if the 'Hotels' category button is displayed, otherwise the return is false.
      */
     public boolean hotelsCategoryButtonIsDisplayed() {
         return isElementAvailable(hotelsCategoryButton);
