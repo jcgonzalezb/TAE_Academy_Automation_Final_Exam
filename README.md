@@ -181,10 +181,10 @@ Process finished with exit code 0
 
 Here is an example of the test results for the mobile module.
 ```
-Testing started at 12:47 PM ...
+"C:\Program Files\Java\jdk-11.0.16.1\bin\java.exe" -ea -Didea.test.cyclic.buffer.size=1048576 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\lib\idea_rt.jar=57547:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.2\plugins\testng\lib\testng-rt.jar;C:\Users\juancamilo.gonzalez\IdeaProjects\TAE_Academy_Automation_Final_Exam\target\test-classes;C:\Users\juancamilo.gonzalez\IdeaProjects\TAE_Academy_Automation_Final_Exam\target\classes;C:\Users\juancamilo.gonzalez\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\github\bonigarcia\webdrivermanager\5.3.1\webdrivermanager-5.3.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\github\docker-java\docker-java\3.2.13\docker-java-3.2.13.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\github\docker-java\docker-java-core\3.2.13\docker-java-core-3.2.13.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.13\docker-java-transport-httpclient5-3.2.13.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;C:\Users\juancamilo.gonzalez\.m2\repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\juancamilo.gonzalez\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\slf4j\slf4j-api\2.0.5\slf4j-api-2.0.5.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\slf4j\slf4j-reload4j\2.0.5\slf4j-reload4j-2.0.5.jar;C:\Users\juancamilo.gonzalez\.m2\repository\ch\qos\reload4j\reload4j\1.2.22\reload4j-1.2.22.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-java\7.8.1\cucumber-java-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-core\7.8.1\cucumber-core-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-gherkin\7.8.1\cucumber-gherkin-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.8.1\cucumber-gherkin-messages-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\gherkin\24.0.0\gherkin-24.0.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\messages\19.1.4\messages-19.1.4.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\tag-expressions\4.1.0\tag-expressions-4.1.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-expressions\16.0.0\cucumber-expressions-16.0.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\datatable\7.8.1\datatable-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-plugin\7.8.1\cucumber-plugin-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\docstring\7.8.1\docstring-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\html-formatter\20.1.0\html-formatter-20.1.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\ci-environment\9.1.0\ci-environment-9.1.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-junit\7.8.1\cucumber-junit-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-picocontainer\7.8.1\cucumber-picocontainer-7.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\cucumber\cucumber-testng\7.9.0\cucumber-testng-7.9.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\google\code\gson\gson\2.10\gson-2.10.jar;C:\Users\juancamilo.gonzalez\.m2\repository\io\appium\java-client\7.2.0\java-client-7.2.0.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\httpcomponents\httpclient\4.5.9\httpclient-4.5.9.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\apache\httpcomponents\httpcore\4.4.11\httpcore-4.4.11.jar;C:\Users\juancamilo.gonzalez\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\cglib\cglib\3.2.12\cglib-3.2.12.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;C:\Users\juancamilo.gonzalez\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;C:\Users\juancamilo.gonzalez\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\springframework\spring-context\5.1.8.RELEASE\spring-context-5.1.8.RELEASE.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\springframework\spring-aop\5.1.8.RELEASE\spring-aop-5.1.8.RELEASE.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\springframework\spring-beans\5.1.8.RELEASE\spring-beans-5.1.8.RELEASE.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\springframework\spring-core\5.1.8.RELEASE\spring-core-5.1.8.RELEASE.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\springframework\spring-jcl\5.1.8.RELEASE\spring-jcl-5.1.8.RELEASE.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\springframework\spring-expression\5.1.8.RELEASE\spring-expression-5.1.8.RELEASE.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\passay\passay\1.6.2\passay-1.6.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\juancamilo.gonzalez\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\juancamilo.gonzalez\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar" com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket57546 @w@C:\Users\juancamilo.gonzalez\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\juancamilo.gonzalez\AppData\Local\Temp\idea_testng.tmp
 log4j:WARN No such property [conversionPattern] in org.apache.log4j.ConsoleAppender.
 Navigating to the Tutorial Screen.
-Dec 05, 2022 12:47:19 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+Dec 09, 2022 9:43:59 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 WARNING: An illegal reflective access operation has occurred
 WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$1 (file:/C:/Users/juancamilo.gonzalez/.m2/repository/cglib/cglib/3.2.12/cglib-3.2.12.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
@@ -203,12 +203,12 @@ Validate the Hotels Category.
 The Hotels Category is available.
 Application closed.
 Navigating to the Tutorial Screen.
-Dec 05, 2022 12:48:02 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+Dec 09, 2022 9:44:40 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 Navigating to the Dashboard Screen.
-Validate moreOtherOptions button.
-The moreOtherOptions button is displayed.
-Navigating to the More Options Screen.
+Validate the 'More Options' button.
+The 'More Options' button is displayed.
+Navigating to the 'More Options' Screen.
 Scroll down until bottom of the screen.
 Validate 'My Profile' option
 Validate 'Property Rules' option
@@ -231,7 +231,7 @@ Validate 'In-App Maps Subject to Google Terms and Conditions' option
 Validate 'In-App Maps Subject to Google Privacy Policy' option
 Application closed.
 Navigating to the Tutorial Screen.
-Dec 05, 2022 12:48:44 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+Dec 09, 2022 9:45:20 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 Navigating to the Dashboard Screen.
 Validate 'Buy Tickets Reserve Dining' button.
@@ -242,17 +242,6 @@ The 'Buy Tickets Reserve Dining' list is displayed.
 Validate 'Check Dining Availability' button.
 The 'Check Dining Availability' button.
 Application closed.
-
-Before All/After All failed
-java.lang.NullPointerException
-	at org.Globant.steps.web.EspnSteps.tearDown(EspnSteps.java:29)
-
-
-3 Scenarios (3 passed)
-13 Steps (13 passed)
-2m9.659s
-
-
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │ Share your Cucumber Report with your team at https://reports.cucumber.io          │
 │ Activate publishing with one of the following:                                    │
@@ -269,11 +258,14 @@ java.lang.NullPointerException
 │ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
 │ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
 └───────────────────────────────────────────────────────────────────────────────────┘
-Exception in thread "main" java.lang.NullPointerException
-	at org.Globant.steps.web.EspnSteps.tearDown(EspnSteps.java:29)
 
-Process finished with exit code 1
+===============================================
+Default Suite
+Total tests run: 3, Failures: 0, Skips: 0
+===============================================
 
+
+Process finished with exit code 0
 ```
 
 ## Bugs
