@@ -1,6 +1,5 @@
 package org.Globant.utils.configuration;
 
-
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -10,9 +9,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 /**
- * Class for capabilities configuration from external file.
+ * Represents the capabilities configuration from external file.
  *
- * @author Arley.Bolivar
+ * @author juancamilo.gonzalez
+ * @version 1.0
  */
 public class ConfigCapabilities {
 
@@ -27,10 +27,9 @@ public class ConfigCapabilities {
     private static final JsonParser parser = new JsonParser();
 
     /**
-     * SetUp's application.
+     * Represents the SetUp's application.
      *
-     * @param capabilities : DesiredCapabilities
-     * @author Arley.Bolivar
+     * @param capabilities : The desired Capabilities.
      */
     public static void applicationSetUp(DesiredCapabilities capabilities) {
         capabilities.setCapability(APP_PACKAGE, getJsonDataProperty(APP_PACKAGE));
@@ -39,10 +38,9 @@ public class ConfigCapabilities {
     }
 
     /**
-     * Device SetUp.
+     * Represents the device SetUp.
      *
-     * @param capabilities : DesiredCapabilities
-     * @author Arley.Bolivar
+     * @param capabilities : The desired Capabilities.
      */
     public static void deviceSetUp(DesiredCapabilities capabilities) {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, getJsonDataProperty(DEVICE_NAME));
@@ -55,8 +53,7 @@ public class ConfigCapabilities {
      * Method for get data form JSON file.
      *
      * @param property : String
-     * @return String
-     * @author Arley.Bolivar
+     * @return String representation of a JSON file.
      */
     private static String getJsonDataProperty(String property) {
         try {
