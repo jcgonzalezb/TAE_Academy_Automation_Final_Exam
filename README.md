@@ -78,8 +78,6 @@ following scenarios.
 ## Table of content
 
 * [Environment](#environment)
-    * [File Descriptions](#file-descriptions)
-    * [API Endpoint](#api-endpoint)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Bugs](#bugs)
